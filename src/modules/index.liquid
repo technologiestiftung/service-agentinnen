@@ -1,0 +1,16 @@
+---
+title: Die 8 Module
+permalink: /module/ # <- for German paths
+eleventyExcludeFromCollections: true
+layout: layouts/base.liquid
+---
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for module in collections.module %}
+    <li>
+      <a href="{{ module.url }}">{{ module.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
