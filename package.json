@@ -11,6 +11,7 @@
     "build:eleventy": "npx @11ty/eleventy",
     "build:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css",
     "build": "run-s clean build:css build:eleventy --print-label",
+    "start": "npx @11ty/eleventy --serve --quiet",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "test": "start-server-and-test dev http://localhost:8080 cypress:run",
