@@ -1,0 +1,22 @@
+---
+title: Service Design und Nutzerorientierung
+abstract: Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen reduzieren, Geld sparen und Ressourcen freisetzen.
+hero_image_url: url
+hero_image_alt: Bild mit Menschen
+example: Sicher kennen viele Menschen das Bild einer Behörden, die der angebotenen Dienstleistung mit Hinweisen in Text und Bild, Türschildern und laminierten Informationen auf die Sprünge helfen muss. Diese besagen, welchen Weg man zu gehen hat, wann man wo klopfen darf, welche Unterlagen bereitgehalten werden müssen, womit man hier völlig falsch ist. Das alles sind Beweise für eine schlecht organisierte Dienstleistung. Ihre Schwachstellen erzeugt Stress bei Mitarbeiter:innen, die offensichtlich stets ähnliche “unangebrachte” Fragen beantworten müssen und “falsches” Verhalten ihrer Nutzer:innen zu verhindern suchen. Das Problem ist, dass der “Fehler” auch nicht bei den Nutzer:innen liegt, sondern im Service selbst - dort aber selten gesucht wird.
+example_image_url: url
+example_image_alt: Bild mit irgendwas
+further_reading:
+  - 
+    title: title
+    description: description
+    link: link
+  - 
+    title: another title
+    description: another description
+    link: another link
+---
+
+Die Entwicklung von Prozessen und Produkten - im Fall von Verwaltung sind das Formulare, Räume der Interaktion oder auch digitale Anwendungen - erfolgt konsequent aus der Perspektive von Nutzer:innen. Nur so ist gewährleistet, dass ein Angebot wirklich die Bedürfnisse, Hürden und individuellen Voraussetzungen der Zielgruppen trifft und das Angebot zu einem "Erfolg" macht. Anders als im privatwirtschaftlichen Bereich sprechen wir natürlich nicht von Gewinnmaximierung, durchaus aber von Kostenersparnis durch bessere Angebote. Mehrere Studien belegen, dass "schlechte" Services - unverständliche Formulare, fehlende Unterlagen, auch verärgerte und frustrierte Bürger:innen - personelle und materielle Ressourcen binden und damit Mehrkosten erzeugen. Auf die Nutzer:innen abgestimmte Angebote reduzieren dagegen den Stress für Mitarbeiter:innen der Verwaltung und bringen sie in die Position hilfreiche Gestalter:innen und nicht "nur" Verwalter:innen sein zu müssen.
+
+Nutzerorientierung wird über methodische Perspektivwechsel, Austausch mit den Nutzer:innen und deren Beobachtung erreicht. Prozesse und Services werden dabei in einzelne Schritte unterteilt, die sich gut im Detail untersuchen und dann auch bearbeiten lassen. Ein Angebot wird ganzheitlich betrachtet, heißt, es beginnt im Moment des ersten Gedanken an eine Verwaltungsleistung: "Wie bekomme ich einen KiTa-Platz für mein Kind?"

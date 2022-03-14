@@ -1,0 +1,30 @@
+---
+layout: layouts/base.liquid
+---
+
+<header>
+  <a href="/module">← Alle Module</a>
+  <h1>{{ title }}</h1>
+  <img src="{{ hero_image_url }}" alt="{{ hero_image_alt }}">
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<section>
+  <h2>Beispiel</h2>
+  <img src="{{ example_image_url }}" alt="{{ example_image_alt }}">
+  <p>{{ example }}</p>
+</section>
+
+<aside>
+  <h2>Weiterführende Links</h2>
+  <ul>
+    {% for link in further_reading %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }} | {{ link.description }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
