@@ -9,7 +9,7 @@
     "dev:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css --watch",
     "dev": "npm-run-all clean --parallel dev:* --print-label",
     "build:eleventy": "npx @11ty/eleventy",
-    "build:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css",
+    "build:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css -m",
     "build": "run-s clean build:css build:eleventy --print-label",
     "start": "npx @11ty/eleventy --serve --quiet",
     "cypress:run": "cypress run",
@@ -26,6 +26,7 @@
     "@tailwindcss/typography": "0.5.2",
     "@testing-library/cypress": "8.0.2",
     "cypress": "9.5.1",
+    "html-minifier": "4.0.0",
     "npm-run-all": "4.1.5",
     "start-server-and-test": "1.14.0",
     "tailwindcss": "3.0.23"

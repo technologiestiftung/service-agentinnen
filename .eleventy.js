@@ -1,9 +1,24 @@
+const htmlmin = require("html-minifier");
+
 module.exports = function (eleventyConfig) {
   // Include all content in the images folder
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
   // Include all content in the fonts folder
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
+  // Minify HTML
+  eleventyConfig.addTransform("htmlmin", function(content) {
+    if(this.outputPath && this.outputPath.endsWith(".html")) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+    }
+
+    return content;
+  });
 
   return {
     dir: {
