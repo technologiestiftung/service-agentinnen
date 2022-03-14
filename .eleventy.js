@@ -2,6 +2,9 @@ module.exports = function (eleventyConfig) {
   // Include all content in the images folder
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
+  // Include all content in the fonts folder
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
   return {
     dir: {
       // Eleventy will only process files within src
