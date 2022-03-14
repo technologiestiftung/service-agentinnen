@@ -39,3 +39,27 @@ General data can be defined in `src_/data/`.
 ### Includes (Layouts and Partials)
 
 `src/_includes` holds all [layouts](https://www.11ty.dev/docs/layouts/) and [partials](https://www.11ty.dev/docs/config/#directory-for-includes).
+
+## Testing
+
+For testing we use [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) and [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro/).
+
+Tests should cover the basic interactions of the website and ensure that all important content is present. Cypress tests should be added to `cypress/integration/` (currently there is only a test stub there).
+
+### Running tests locally
+
+Make a test run:
+
+```bash
+npm run test
+```
+
+Launching the test runner in watch mode:
+
+```bash
+npm run test:watch
+```
+
+### Running tests in CI
+
+In `.github/workflows/test.yml` we have configured Cypress to run all pushes and pull requests to `main`. The passing of this test run is required for merging changes.
