@@ -1,0 +1,32 @@
+
+{%- comment -%} Construct common variables for use in the <meta> tags {%- endcomment -%}
+{% capture metaTitle %}{% if title %}{{ title }} | {% endif %}{{ site.name }}{% endcapture %}
+{% capture metaDescription %}{% if abstract %}{{ abstract }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% capture metaUrl %}{{ site.url }}{{ page.url }}{% endcapture %}
+
+{%- comment -%} Meta basics {%- endcomment -%}
+<meta name="title" content="{{ metaTitle }}">
+<meta name="description" content="{{ metaDescription }}">
+<meta name="author" content="{{ site.authorName }}" />
+<meta itemprop="name" content="{{ metaTitle }}">
+<meta itemprop="description" content="{{ metaDescription }}">
+<meta itemprop="image" content="{{ site.url }}{{ site.socialMediaImagePath }}">
+
+{%- comment -%} Open Graph {%- endcomment -%}
+<meta property="og:url" content="{{ metaUrl }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:image" content="{{ site.url }}{{ site.socialMediaImagePath }}">
+<meta property="og:image:type" content="{{ site.socialMediaImageType }}" />
+<meta property="og:image:alt" content="{{ site.socialMediaImageAlt }}" />
+<meta property="og:description" content="{{ metaDescription }}">
+<meta property="og:site_name" content="{{ site.name }}">
+
+{%- comment -%} Twitter {%- endcomment -%}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="{{ site.twitterUser }}">
+<meta name="twitter:creator" content="{{ site.twitterUser }}">
+<meta name="twitter:url" content="{{ metaUrl }}">
+<meta name="twitter:title" content="{{ metaTitle }}">
+<meta name="twitter:description" content="{{ metaDescription }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.socialMediaImagePath }}">
