@@ -39,4 +39,12 @@
       url(/assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
     font-display: swap;
   }
+
+  body {
+    @apply antialiased text-blue-500;
+  }
+
+  a {
+    @apply focus:outline-none focus:ring focus:ring-magenta-500 focus:ring-offset-0;
+  }
 }
