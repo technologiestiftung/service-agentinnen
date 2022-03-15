@@ -1,13 +1,38 @@
-<header>
-  <a href="/">Logo</a>
-  <nav>
-    <ul>
-      <li>
-        <a href="/module">→ Module</a>
-      </li>
-    </ul>
-  </nav>
-  <div>
-    Ein Angebot des <a href="https://citylab-berlin.org">CityLAB Berlin</a>
-  </div>
+<header
+  class="sticky top-0 w-screen bg-blue-500 text-white border-b border-blue-300 pt-3 pb-4"
+>
+  <section class="px-4 container mx-auto flex justify-between items-center">
+    <a
+      href="/"
+      title="Hauptseite der Webseite"
+      class="opacity-100 transition-opacity hover:opacity-80 origin-left transform scale-90 sm:scale-100"
+    >
+      {% include 'partials/logo.liquid' %}
+    </a>
+    <nav class="flex items-center gap-8">
+      <ul>
+        <li class="inline-flex gap-6">
+          <a
+            href="/module"
+            class="text-blue-100 font-bold md:text-lg opacity-100 transition-opacity hover:opacity-80"
+            title="Übersichtseite aller 8 Module zur agilen Behördenarbeit"
+          >
+            <span class="sm:inline hidden">→</span> Module
+          </a>
+        </li>
+      </ul>
+      <div
+        class="pl-8 gap-3 pt-1.5 hidden md:inline-flex border-l border-blue-300 text-blue-200"
+      >
+        Ein Angebot des
+        <a
+          href="https://citylab-berlin.org"
+          class="opacity-100 transition-opacity hover:opacity-80"
+          title="Logo vom Projekt Citylab Berlin, der Technologiestiftung Berlin"
+        >
+          {% include 'partials/citylab_logo.liquid' %}
+        </a>
+      </div>
+    </nav>
+  </section>
 </header>
