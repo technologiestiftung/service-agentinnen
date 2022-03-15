@@ -1,4 +1,7 @@
 module.exports = function (eleventyConfig) {
+  // Include all content in the common folder and copy it to the build root
+  eleventyConfig.addPassthroughCopy({ "src/assets/common": "/" });
+
   // Include all content in the images folder
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
