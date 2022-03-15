@@ -14,18 +14,4 @@ layout: /layouts/base.liquid
 
 {% include 'partials/ersten_modul.liquid' %}
 
-<aside>
-  <h2>In der Praxis: Die Pilot-Schulung 2021</h2>
-  <p>
-    Die Weiterbildung xxx ist ein vom CityLab durchgeführtes Pilotprojekt. 16
-    Mitarbeiter:innen der Berliner Senats- und Bezirksverwaltung haben an realen
-    Verwaltungsprozessen die Prinzipien und Werkzeuge der nutzerzentrierten
-    Prozessgestaltung erlernt.
-  </p>
-  <h3>O-Töne unserer Teilnehmer:innen</h3>
-  <ul>
-    {% for quote in quotes %}
-    <li>"{{ quote }}"</li>
-    {% endfor %}
-  </ul>
-</aside>
+{% include 'partials/in_practice.liquid' %}
