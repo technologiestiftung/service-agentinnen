@@ -58,3 +58,12 @@ layout: /layouts/base.liquid
   <h3>O-Töne unserer Teilnehmer:innen</h3>
   <ul></ul>
 </aside>
+
+<!-- capture the JS content as a Nunjucks variable -->
+{% set js %}
+  {% include "scripts/accordion.js" %}
+{% endset %}
+<!-- feed it through our jsmin filter to minify -->
+<script>
+  {{ js | jsmin | safe }}
+</script>

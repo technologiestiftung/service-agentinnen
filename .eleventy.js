@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const { minify } = require("terser");
 
 module.exports = function (eleventyConfig) {
   // Include all content in the images folder
@@ -18,6 +19,21 @@ module.exports = function (eleventyConfig) {
     }
 
     return content;
+  });
+
+  // Minify JS
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      // Fail gracefully.
+      callback(null, code);
+    }
   });
 
   return {
