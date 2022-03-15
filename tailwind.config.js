@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./src/**/*.{html,liquid}"],
   theme: {
+    container: {
+      center: true,
+    },
     colors: {
       magenta: {
         50: "#feedf1",
