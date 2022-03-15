@@ -18,6 +18,23 @@ layout: layouts/base.liquid
   <p>{{ example }}</p>
 </section>
 
+<section>
+  {% for method in methods %}
+    <div class="grid gap-4 grid-cols-12">
+      <div class="col-span-5">
+        <h2>{{ method.title }}</h2>
+        {% if abstract %}
+          <p>{{ method.abstract }}</p>
+        {% endif %}
+        <a href="{{ method.doc_path }}">Arbeitsblatt downloaden</a>
+      </div>
+      <p class="col-span-7">
+        {{ method.description }}
+      </p>
+    </div>
+  {% endfor %}
+</section>
+
 <aside>
   <h2>Weiterführende Links</h2>
   <ul>
