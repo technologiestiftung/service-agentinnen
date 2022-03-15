@@ -2,13 +2,7 @@
 layout: /layouts/base.liquid
 ---
 
-<section>
-  <h1>In 8 Modulen zur agilen Behördenarbeit</h1>
-  <h2>So machen Sie Ihr Team fit für die Zukunft</h2>
-  <p>Digitale, agile und nutzer:innen-orientierte Prozesse sind wesentlich für den anstehenden Wandel in allen Bereichen des öffentlichen Lebens. Mit der Weiterbildung xxx geben wir auf diese Herausforderung eine konkrete und umsetzbare Antwort. Lassen Sie sich inspirieren.</p>
-  <a href="/module">Direkt zu den Modulen</a>
-  <a href="#intro">Mehr Informationen</a>
-</section>
+{% include "partials/home_hero.liquid" heroTitle: "In 8 Modulen zur agilen Behördenarbeit" %}
 
 <main id="intro">
   <div>
@@ -62,12 +56,3 @@ layout: /layouts/base.liquid
     {% endfor %}
   </ul>
 </aside>
-
-<!-- capture the JS content as a Nunjucks variable -->
-{% set js %}
-  {% include "scripts/accordion.js" %}
-{% endset %}
-<!-- feed it through our jsmin filter to minify -->
-<script>
-  {{ js | jsmin | safe }}
-</script>
