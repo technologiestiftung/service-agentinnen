@@ -2,63 +2,16 @@
 layout: /layouts/base.liquid
 ---
 
-<section>
-  <h1>In 8 Modulen zur agilen Behördenarbeit</h1>
-  <h2>So machen Sie Ihr Team fit für die Zukunft</h2>
-  <p>Digitale, agile und nutzer:innen-orientierte Prozesse sind wesentlich für den anstehenden Wandel in allen Bereichen des öffentlichen Lebens. Mit der Weiterbildung xxx geben wir auf diese Herausforderung eine konkrete und umsetzbare Antwort. Lassen Sie sich inspirieren.</p>
-  <a href="/module">Direkt zu den Modulen</a>
-  <a href="#intro">Mehr Informationen</a>
-</section>
+{% include "partials/home_hero.liquid" %}
 
 <main id="intro">
-  <div>
-    <h2>Einführung</h2>
-    <p>Mitarbeiter:innen der Verwaltung sind heute oft ausführendes Organ des Innovationsbestrebens und -drucks der öffentlichen Hand: Prozesse werden umgestaltet und digitalisiert; es gilt nach Außen diverse Zielgruppen anzusprechen und intern fach- und behördenübergreifend zusammenzuarbeiten. Das benötigt Know-How und Methodenwissen.</p>
-    <p>Die Weiterbildung ist eine Möglichkeit, dieses Wissen zu erwerben und wird hier in einem konzentrierten Überblick vorgestellt.</p>
-  </div>
+  {% include 'partials/introduction.liquid' %}
 
-  <div>
-    <h2>Herausforderungen für eine moderne Verwaltung</h2>
-    <ul>
-      <li><b>Transformation in allen Bereichen des öffentlichen Lebens</b> <br>
-        Digitale, agile und nutzer:innen-orientierte Prozesse sind wesentlich für den anstehenden Wandel in allen Bereichen des öffentlichen Lebens.
-        In Zeiten der Digitalisierung sind sie unabdingbar.</li>
-      <li><b>BürgerInnen erleben Nutzerzentrierung als Standard</b> <br>
-        Verwaltung steckt bei diesen Ansprüchen in einem Dilemma: BürgerInnen erleben Nutzerzentriertheit als Standard in ihrem privaten Konsum und erwarten dies zunehmend auch von Verwaltung. Mit dem OZG hat die Erfüllung dieser Anforderungen zudem eine klare Deadline.</li>
-      <li><b>Es fehlt an Know-How und Methodenwissen</b> <br>
-        Führungskräfte stehen unter dem Druck der Umsetzung, ohne das entsprechende Know-How bereitstellen zu können. Die ausführenden Mitarbeiter:innen sind bisher nicht ausreichend geschult oder mit dem notwendigen Handwerkszeug ausgestattet.</li>
-    </ul>
-  </div>
-
-  <div>
-    <h2>Service Design als Lösung</h2>
-    <p>Service Design arbeitet auf Grundlage des NutzerInnenerlebnisses - denn niemand kann besser Auskunft geben als die Personen, die einen Service von Anfang bis Ende mit echten Bedürfnissen oder auch Handicaps durchlaufen. Dies ist für keine Institution wichtiger als für Verwaltung. Sie hat die größte und vielfältigste Zielgruppe, die zudem darauf angewiesen ist, die angebotenen Dienstleistungen zu nutzen.</p>
-    <p>Service Design ist eine junge, oft noch unbekannte Designdisziplin. Wie der Name sagt, gestaltet Service Design Prozesse und Dienstleistungen und damit im Grunde jede ganzheitliche Erfahrung, die wir machen, wenn wir einem Angebot der privaten oder öffentlichen Hand begegnen.</p>
-    <p>Die Arbeitsweise Service Design ist durch das Zusammenwirken ihrer Methoden und die entstehende Dramaturgie automatisch agil.</p>
-    <details>
-      <summary>Umsetzung in dieser Weiterbildung</summary>
-      <div>
-        <p>xxx setzt bei diesem Dilemma an und führt Führungskräfte wie auch Verwaltungsmitarbeiter:innen in die Methode Service-Design ein.</p>
-        <p>Die Weiterbildung basiert auf dem Train-the-Trainer-Ansatz und befähigt dazu, die Werkzeuge nutzen und auch an Mitarbeiter:innen vermitteln zu können um Nutzerzentriertheit in die Behördenarbeit einzuführen.</p>
-        <p>Jedes Modul beinhaltete einen erläuternden Überbau, angewandte Beispiele sowie Arbeits- und Hintergrundmaterial.</p>
-      </div>
-    </details>
-  </div>
+  {% include 'partials/moderne_verwaltung.liquid' %}
+  <br />
+  {% include 'partials/service-design.liquid' %}
 </main>
 
-<section>
-  <h2>Gleich loslegen mit dem ersten Modul</h2>
-  <a href="/module/service-design-und-nutzerorientierung">Service Design und Nutzerorientierung</a>
-  <a href="/module">Alle Module</a>
-</section>
+{% include 'partials/ersten_modul.liquid' %}
 
-<aside>
-  <h2>In der Praxis: Die Pilot-Schulung 2021</h2>
-  <p>Die Weiterbildung xxx  ist ein vom CityLab durchgeführtes Pilotprojekt. 16 Mitarbeiter:innen der Berliner Senats- und Bezirksverwaltung haben an realen Verwaltungsprozessen die Prinzipien und Werkzeuge der nutzerzentrierten Prozessgestaltung erlernt.</p>
-  <h3>O-Töne unserer Teilnehmer:innen</h3>
-  <ul>
-    {% for quote in quotes %}
-      <li>"{{ quote }}"</li>
-    {% endfor %}
-  </ul>
-</aside>
+{% include 'partials/in_practice.liquid' %}

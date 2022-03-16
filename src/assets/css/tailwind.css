@@ -10,6 +10,7 @@
     src: local("National Regular"),
       url(/assets/fonts/NationalWeb-Regular.woff2) format("woff2"),
       url(/assets/fonts/NationalWeb-Regular.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "National Regular";
@@ -18,6 +19,7 @@
     src: local("National Regular Italic"),
       url(/assets/fonts/NationalWeb-RegularItalic.woff2) format("woff2"),
       url(/assets/fonts/NationalWeb-RegularItalic.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "National Regular";
@@ -26,6 +28,7 @@
     src: local("National Extrabold"),
       url(/assets/fonts/NationalWeb-Extrabold.woff2) format("woff2"),
       url(/assets/fonts/NationalWeb-Extrabold.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "National Regular";
@@ -34,5 +37,14 @@
     src: local("National Extrabold Italic"),
       url(/assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
       url(/assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
+    font-display: swap;
+  }
+
+  body {
+    @apply antialiased text-blue-500;
+  }
+
+  a {
+    @apply focus:outline-none focus:ring focus:ring-magenta-500 focus:ring-offset-0;
   }
 }
