@@ -1,0 +1,20 @@
+<a
+  href="{{ href }}"
+  aria-labelledby="{{ title }}"
+  class="grid grid-cols-[1fr_auto] gap-0.5 pl-5 pr-0 py-4 bg-blue-50 bg-opacity-50"
+>
+  <div>
+    <h2 class="text-xl text-blue-500" id="{{ title }}">
+      <span class="text-[40px] font-bold text-magenta-500">
+        {% if number < 10 %}0{% endif %}{{ number }}</span
+      ><br />
+      {{ title }}
+    </h2>
+    <p class="mt-1 text-blue-300">{{ abstract }}</p>
+  </div>
+  <img
+    src="{{ image_url }}"
+    alt="{{ image_alt }}"
+    class="w-24 -translate-y-16"
+  />
+</a>
