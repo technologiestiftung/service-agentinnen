@@ -1,10 +1,10 @@
 <a
   href="{{ href }}"
   aria-labelledby="{{ title }}"
-  class="grid grid-cols-[1fr_auto] md:grid-cols-[180px_1fr] lg:grid-cols-[224px_1fr] gap-0.5 pl-5 md:pl-0 pr-0 py-4 bg-blue-50 md:bg-transparent bg-opacity-50 group focus:ring-0"
+  class="grid grid-cols-[1fr_auto] md:grid-cols-[180px_1fr] lg:grid-cols-[224px_1fr] gap-0 pl-5 md:pl-0 pr-0 py-4 bg-blue-25 md:bg-transparent group focus:ring-0"
 >
   <div
-    class="md:bg-blue-50 md:bg-opacity-50 md:px-4 md:py-4 md:h-[204px] lg:h-[254px] md:relative group-focus:ring group-focus:ring-magenta-500 group-focus:ring-offset-0"
+    class="md:bg-blue-25 md:px-4 md:py-4 md:h-[204px] lg:h-[254px] md:relative group-focus:ring group-focus:ring-magenta-500 group-focus:ring-offset-0"
   >
     <div class="hidden md:block md:absolute top-0 right-0" aria-hidden="true">
       <svg
@@ -12,7 +12,7 @@
         width="32"
         height="32"
         viewBox="0 0 32 32"
-        class="text-white"
+        class="{% if is_on_blue %}text-blue-500{% else %}text-white{% endif %}"
       >
         <polygon points="0 0 32 0 32 32" fill="currentColor" stroke-width="0" />
       </svg>
