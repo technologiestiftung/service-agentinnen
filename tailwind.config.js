@@ -35,6 +35,7 @@ module.exports = {
         900: "#0b0c13",
       },
       white: "#fff",
+      transparent: "transparent",
     },
     fontFamily: {
       sans: [

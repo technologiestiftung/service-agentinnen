@@ -1,20 +1,37 @@
 <a
   href="{{ href }}"
   aria-labelledby="{{ title }}"
-  class="grid grid-cols-[1fr_auto] gap-0.5 pl-5 pr-0 py-4 bg-blue-50 bg-opacity-50"
+  class="grid grid-cols-[1fr_auto] md:grid-cols-[180px_1fr] lg:grid-cols-[224px_1fr] gap-0.5 pl-5 pr-0 py-4 bg-blue-50 md:bg-transparent bg-opacity-50"
 >
-  <div>
-    <h2 class="text-xl text-blue-500" id="{{ title }}">
-      <span class="text-[40px] font-bold text-magenta-500">
-        {% if number < 10 %}0{% endif %}{{ number }}</span
-      ><br />
-      {{ title }}
-    </h2>
-    <p class="mt-1 text-blue-300">{{ abstract }}</p>
+  <div
+    class="md:bg-blue-50 md:bg-opacity-50 md:px-4 md:py-4 md:h-[204px] lg:h-[254px] md:relative"
+  >
+    <div class="hidden md:block md:absolute top-0 right-0" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        class="text-white"
+      >
+        <polygon points="0 0 32 0 32 32" fill="currentColor" stroke-width="0" />
+      </svg>
+    </div>
+    <div class="grid grid-rows-[auto_auto]">
+      <h2 class="text-xl md:text-lg xl:text-2xl md:leading-tight text-blue-500" id="{{ title }}">
+        <span
+          class="text-[40px] md:text-[44px] xl:text-[64px] md:leading-3 font-bold text-magenta-500"
+        >
+          {% if number < 10 %}0{% endif %}{{ number }}</span
+        ><br />
+        {{ title }}
+      </h2>
+      <p class="mt-1 text-blue-300 text-base lg:text-sm xl:text-base">{{ abstract }}</p>
+    </div>
   </div>
   <img
     src="{{ image_url }}"
     alt="{{ image_alt }}"
-    class="w-24 -translate-y-16"
+    class="w-24 md:w-full md:order-first -translate-y-16 md:-translate-y-[28px] lg:-translate-y-[34px]"
   />
 </a>
