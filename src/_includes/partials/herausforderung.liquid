@@ -3,5 +3,7 @@
   {{ title }}
 </h4>
 {{ content }}
-{% endcapture %} {% include 'partials/angle_block.liquid' content:
-herausforderung %}
+{% endcapture %}
+<li>
+  {% include 'partials/angle_block.liquid' tag: 'li' content: herausforderung %}
+</li>
