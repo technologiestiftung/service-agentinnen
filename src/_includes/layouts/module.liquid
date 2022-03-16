@@ -8,11 +8,7 @@ layout: layouts/base.liquid
   {{ content }}
 </main>
 
-<section>
-  <h2>Beispiel</h2>
-  <img src="{{ example_image_url }}" alt="{{ example_image_alt }}" />
-  <p>{{ example }}</p>
-</section>
+{% include 'partials/example.liquid' %}
 
 <section>
   {% for method in methods %}

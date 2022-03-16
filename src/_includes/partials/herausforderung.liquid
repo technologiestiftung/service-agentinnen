@@ -1,17 +1,7 @@
-<li class="bg-blue-50 bg-opacity-50 p-4 sm:p-6 md:p-8 relative">
-  <div class="absolute top-0 right-0" aria-hidden="true">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-      class="text-white"
-    >
-      <polygon points="0 0 32 0 32 32" fill="currentColor" stroke-width="0" />
-    </svg>
-  </div>
-  <h4 class="text-magenta-500 font-bold leading-tight mb-2 text-lg">
-    {{ title }}
-  </h4>
-  {{ content }}
-</li>
+{% capture herausforderung %}
+<h4 class="text-magenta-500 font-bold leading-tight mb-2 text-lg">
+  {{ title }}
+</h4>
+{{ content }}
+{% endcapture %} {% include 'partials/angle_block.liquid' content:
+herausforderung %}

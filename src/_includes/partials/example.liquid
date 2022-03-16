@@ -1,0 +1,15 @@
+{% capture example %}
+<img
+  src="{{ example_image_url }}"
+  alt="{{ example_image_alt }}"
+  class="w-full"
+/>
+<div class="prose text-blue-500 leading-snug">
+  {% include 'partials/heading.liquid' content: 'Beispiel' class: 'mb-3 sm:mb-4
+  md:mb-5 font-normal' %}
+  <p>{{ example }}</p>
+</div>
+{% endcapture %} {% include 'partials/angle_block.liquid' content: example
+class: 'container my-8 sm:my-12 md:my-16 p-4 py-8 sm:p-8 md:p-12 grid
+grid-cols-1 md:grid-cols-[1fr,2fr] lg:grid-cols-[auto,1fr] gap-8 sm:gap-12
+md:gap-16 items-center' %}
