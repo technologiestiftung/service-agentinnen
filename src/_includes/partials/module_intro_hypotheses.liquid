@@ -1,0 +1,24 @@
+<div
+  class="container px-4 py-2 sm:py-6 md:py-6 grid grid-cols-2 gap-4 sm:gap-8 md:gap-16"
+>
+  <ul>
+    {% for link in hypotheses %}
+    <li class="py-2 grid grid-cols-[auto,1fr] gap-4 items-start">
+      <svg
+        class="mt-1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="18"
+        viewBox="0 0 12 18"
+      >
+        <polygon
+          fill="#F64C72"
+          points="3.962 25 0 22.606 .075 11.906 8.162 7 12 9.327 11.984 20.096"
+          transform="translate(0 -7)"
+        />
+      </svg>
+      <a class="text-magenta-500 sm:text-lg xl:text-xl">{{ link.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

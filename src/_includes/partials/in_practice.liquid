@@ -1,8 +1,14 @@
-<aside class="container py-8 px-8 bg-blue-50 bg-opacity-50 grid grid-cols-1 md:grid-cols-12 gap-8">
-  <img src="/assets/images/schulung.webp" alt="Viele Menschen stehen um einen Tisch herum" class="col-span-1 md:col-span-5 w-full max-w-full">
+<aside
+  class="container py-8 px-8 bg-blue-50 bg-opacity-50 grid grid-cols-1 md:grid-cols-12 gap-8"
+>
+  <img
+    src="/assets/images/schulung.webp"
+    alt="Viele Menschen stehen um einen Tisch herum"
+    class="col-span-1 md:col-span-5 w-full max-w-full"
+  />
   <div class="col-span-1 md:col-span-7 order-first md:order-none">
     {% include 'partials/heading.liquid' content: 'In der Praxis: Die
-    Pilot-Schulung 2021' class: 'pb-3 sm:pb-5' %}
+    Pilot-Schulung 2021' class: 'pb-3 sm:pb-5 text-magenta-500' %}
     <p>
       Die Weiterbildung xxx ist ein vom CityLab durchgeführtes Pilotprojekt. 16
       Mitarbeiter:innen der Berliner Senats- und Bezirksverwaltung haben an
@@ -11,13 +17,13 @@
     </p>
   </div>
   <div class="col-span-1 md:col-span-12">
-    <h3 class="text-lg sm:text-xl md:text-2xl text-magenta-500">O-Töne unserer Teilnehmer:innen</h3>
+    <h3 class="text-lg sm:text-xl md:text-2xl text-magenta-500">
+      O-Töne unserer Teilnehmer:innen
+    </h3>
     <ul class="mt-7 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
       {% for quote in quotes %}
       <li class="px-5 py-4 text-base md:text-lg bg-white italic">
-        <blockquote>
-          "{{ quote }}"
-        </blockquote>
+        <blockquote>"{{ quote }}"</blockquote>
       </li>
       {% endfor %}
     </ul>
