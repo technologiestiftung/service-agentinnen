@@ -1,0 +1,18 @@
+<section class="bg-blue-500 py-6 sm:py-8 md:py-12 text-white">
+  <div class="container px-4 grid grid-cols-2">
+    <aside class="grid grid-cols-1 grid-rows-[auto,1fr]">
+      <a href="/module">← Alle Module</a>
+      <div>
+        <span
+          class="text-5xl md:text-7xl -mt-4 text-magenta-500 leading-10 font-semibold mb-2 md:mb-0"
+        >
+          {{ modulId }}
+        </span>
+        <h1 class="text-xl md:text-2xl leading-tight -mt-1">
+          {{ title }}
+        </h1>
+      </div>
+    </aside>
+    <img src="{{ hero_image_url }}" alt="{{ hero_image_alt }}" />
+  </div>
+</section>
