@@ -7,10 +7,12 @@ layout: layouts/base.liquid
 
 <h1>{{ title }}</h1>
 
-<ul>
+<ul class="container px-4 grid grid-cols-1 gap-8">
   {% for module in collections.module %}
-    <li>
-      <a href="{{ module.url }}">{{ module.data.title }}</a>
-    </li>
+  <li>
+    {% include 'partials/module_card.liquid' href: module.url title:
+    module.data.title abstract: module.data.abstract number: forloop.index
+    image_url: module.data.hero_image_url image_alt: module.data.hero_image_alt %}
+  </li>
   {% endfor %}
 </ul>
