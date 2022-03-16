@@ -7,7 +7,7 @@ layout: layouts/base.liquid
 
 <h1>{{ title }}</h1>
 
-<ul class="container px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-0 lg:gap-8">
+<ul class="container pb-24 px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-0 lg:gap-8">
   {% for module in collections.module %}
   <li class="even:translate-y-0 lg:even:translate-y-40">
     {% include 'partials/module_card.liquid' href: module.url title:
