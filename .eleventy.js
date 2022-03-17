@@ -10,6 +10,9 @@ module.exports = function (eleventyConfig) {
   // Include all content in the fonts folder
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
+  // Include all content in the js folder
+  eleventyConfig.addPassthroughCopy("src/assets/js");
+
   // Include all content in the docs folder
   eleventyConfig.addPassthroughCopy("src/assets/docs");
 
