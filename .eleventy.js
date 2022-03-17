@@ -1,5 +1,4 @@
 const htmlmin = require("html-minifier");
-const format = require('date-fns/format');
 
 module.exports = function (eleventyConfig) {
   // Include all content in the common folder and copy it to the build root
@@ -31,11 +30,6 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
-
-  // add `date` filter
-  eleventyConfig.addFilter('date', function (date, dateFormat) {
-    return format(date, dateFormat)
-  })
 
   return {
     dir: {
