@@ -1,5 +1,5 @@
 <div
-  class="mt-16 px-4 container grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8 lg:items-center"
+  class="my-16 md:mt-32 md:mb-24 px-4 container grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8 lg:items-center"
 >
   <div class="md:col-span-5 lg:col-span-4">
     {% include 'partials/heading.liquid' content: 'Einführung' class: 'pb-3
@@ -19,18 +19,17 @@
   <div
     class="order-first md:order-last md:col-span-7 lg:col-span-6 lg:col-start-6"
   >
-    <video controls class="aspect-video w-full border-4 border-blue-500">
-      <source src="service-agentinnen.mp4" type="video/mp4" />
-      <p>
-        Leider unterstützt dein Browser keine Videoinhalte. Hier geht es zum
-        <a href="service-agentinnen.mp4">Video als Datei</a>.
-      </p>
-    </video>
+    <iframe
+      class="aspect-video w-full"
+      src="https://www.youtube-nocookie.com/embed/iqpsEzLdl_k"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
     <div class="bg-blue-50 bg-opacity-50 py-3 px-4">
-      <p class="italic max-w-prose">
-        Dr. Benjamin Seibel stellt das Konzept der Service:Agent:innen-Schulung
-        vor. Oder anderer Text, der beschreibt, was eigentlich in dem Video
-        passiert.
+      <p class="max-w-prose">
+        Rückblick auf die erste ServiceAgent:innen-Schulung 2021. (06:01 min)
       </p>
     </div>
   </div>
