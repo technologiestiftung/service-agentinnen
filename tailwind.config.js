@@ -14,6 +14,7 @@ module.exports = {
         500: "#f64c72",
       },
       blue: {
+        25: "#f3f3fd",
         50: "#eaeaf6",
         100: "#d5d5ec",
         200: "#acacda",
@@ -35,6 +36,7 @@ module.exports = {
         900: "#0b0c13",
       },
       white: "#fff",
+      transparent: "transparent",
     },
     fontFamily: {
       sans: [
@@ -53,7 +55,30 @@ module.exports = {
         "sans-serif",
       ],
     },
-    extend: {},
+    extend: {
+      typography: ({ theme }) => ({
+        gray: {
+          'css': {
+            '--tw-prose-body': theme('colors.blue[500]'),
+            '--tw-prose-headings': theme('colors.blue[500]'),
+            '--tw-prose-lead': theme('colors.blue[400]'),
+            '--tw-prose-links': theme('colors.magenta[500]'),
+            '--tw-prose-bold': theme('colors.blue[500]'),
+            '--tw-prose-counters': theme('colors.magenta[500]'),
+            '--tw-prose-bullets': theme('colors.blue[100]'),
+            '--tw-prose-hr': theme('colors.blue[100]'),
+            '--tw-prose-quotes': theme('colors.blue[100]'),
+            '--tw-prose-quote-borders': theme('colors.blue[50]'),
+            '--tw-prose-captions': theme('colors.blue[500]'),
+            '--tw-prose-code': theme('colors.blue[500]'),
+            '--tw-prose-pre-code': theme('colors.blue[500]'),
+            '--tw-prose-pre-bg': theme('colors.blue[25]'),
+            '--tw-prose-th-borders': theme('colors.blue[50]'),
+            '--tw-prose-td-borders': theme('colors.blue[50]'),
+          },
+        },
+      }),
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

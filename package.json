@@ -8,7 +8,7 @@
     "dev:eleventy": "npx @11ty/eleventy --serve --quiet",
     "dev:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css --watch",
     "dev": "npm-run-all clean --parallel dev:* --print-label",
-    "build:eleventy": "npx @11ty/eleventy",
+    "build:eleventy": "NODE_ENV=production npx @11ty/eleventy",
     "build:css": "npx tailwindcss -i ./src/assets/css/tailwind.css -c tailwind.config.js -o ./_site/style.css -m",
     "build:js": "uglifyjs-folder ./src/assets/js --config-file 'uglify.config.json' -x '.js' --output ./_site/assets/js -e",
     "build": "run-s clean build:css build:eleventy build:js --print-label",

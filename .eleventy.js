@@ -16,6 +16,11 @@ module.exports = function (eleventyConfig) {
   // Include all content in the docs folder
   eleventyConfig.addPassthroughCopy("src/assets/docs");
 
+  // Remove the soft hyphen from strings (in our case used for the titles)
+  eleventyConfig.addFilter("removeSoftHyphen", function (value) {
+    return value.replace("&shy;", "");
+  });
+
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content) {
     if (this.outputPath && this.outputPath.endsWith(".html")) {
