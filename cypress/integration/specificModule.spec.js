@@ -1,11 +1,11 @@
-describe("Modules Overview", () => {
+describe("Module Service Design", () => {
   beforeEach(() => {
-    cy.visit("/module");
+    cy.visit("/module/service-design-und-nutzerorientierung/");
   });
 
   it("renders the main heading", () => {
     cy.findByRole("heading", {
-      name: /Die 8 Module/i,
+      name: /Service Design und Nutzerorientierung/i,
     }).should("exist");
   });
 });
