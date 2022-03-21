@@ -5,23 +5,3 @@
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'none'; connect-src 'self';form-action 'self'; img-src 'self' https://piwik.technologiestiftung-berlin.de https://i.ytimg.com; base-uri 'self'; script-src 'self' https://piwik.technologiestiftung-berlin.de; style-src 'self'; font-src 'self'; manifest-src 'self'; object-src 'none'; frame-src youtube.com www.youtube.com www.youtube-nocookie.com;"
-
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-  # optional, fails build when a category is below a threshold
-  [plugins.inputs.thresholds]
-    performance = 0.5
-    accessibility = 0.5
-    best-practices = 0.5
-    seo = 0.5
-
-  [[plugins.inputs.audits]]
-  output_path = "reports/lighthouse/home.html"
-  path = ""
-  [[plugins.inputs.audits]]
-  output_path = "reports/lighthouse/overview.html"
-  path = "module"
-  [[plugins.inputs.audits]]
-  output_path = "reports/lighthouse/firs-module.html"
-  path = "module/service-design-und-nutzerorientierung"
