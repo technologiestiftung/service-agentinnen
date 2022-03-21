@@ -1,6 +1,6 @@
 describe("Module Service Design", () => {
   beforeEach(() => {
-    cy.visit("/module/service-design-und-nutzerorientierung/");
+    cy.visit("/module/service-design-und-nutzer:innenorientierung/");
   });
 
   it("renders the hero correctly", () => {
@@ -11,7 +11,7 @@ describe("Module Service Design", () => {
       name: /Modul Nummer: .+/i,
     }).should("exist");
     cy.findByRole("heading", {
-      name: /Service Design und Nutzerorientierung/i,
+      name: /Service Design und Nutzer:innenorientierung/i,
     }).should("exist");
     cy.findByRole("img", {
       name: /Menschen, die sich an den Händen fassen und Objekte austauschen/i,
