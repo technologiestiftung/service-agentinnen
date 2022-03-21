@@ -25,9 +25,9 @@ describe("Homepage", () => {
   });
 });
 
-describe('Header', () => { 
+describe("Header", () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit("/");
   });
 
   it("rendres the website logo", () => {
@@ -35,11 +35,15 @@ describe('Header', () => {
   });
 
   it("rendres a link to all modules", () => {
-    cy.findByRole("link", { name: /Übersichtseite aller 8 Module zur agilen Behördenarbeit/i }).should("exist");
+    cy.findByRole("link", {
+      name: /Übersichtseite aller 8 Module zur agilen Behördenarbeit/i,
+    }).should("exist");
   });
 
   it("rendres a link to citylab", () => {
-    cy.findByRole("link", { name: /Logo vom Projekt Citylab Berlin, der Technologiestiftung Berlin/i }).should("exist");
+    cy.findByRole("link", {
+      name: /Logo vom Projekt Citylab Berlin, der Technologiestiftung Berlin/i,
+    }).should("exist");
   });
 });
 
@@ -62,9 +66,11 @@ describe("Footer", () => {
 
   it("renders the logo links in the footer", () => {
     const footer = cy.get("footer:last-of-type");
-    footer.findByRole("link", {
-      name: /Logo vom Projekt CityLab Berlin/i,
-    }).should("exist");
+    footer
+      .findByRole("link", {
+        name: /Logo vom Projekt CityLab Berlin/i,
+      })
+      .should("exist");
     cy.findByRole("link", {
       name: /Logo der Technologiestiftung Berlin/i,
     }).should("exist");
@@ -84,10 +90,13 @@ describe("Footer", () => {
       name: /Quellcode/i,
     }).should("exist");
     cy.findByRole("link", {
+      name: /Probleme der Barrierfreiheit melden/i,
+    }).should("exist");
+    cy.findByRole("link", {
       name: /Datenschutz/i,
     }).should("exist");
     cy.findByRole("link", {
-      name: /Impressumg/i,
+      name: /Impressum/i,
     }).should("exist");
   });
 });
