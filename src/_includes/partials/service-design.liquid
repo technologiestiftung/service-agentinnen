@@ -1,4 +1,4 @@
-<div class="container sm:px-4 py-6 sm:py-8 md:py-16">
+<div class="container max-w-7xl sm:px-4 py-6 sm:py-8 md:py-16">
   <div
     class="bg-blue-500 relative text-white px-8 p-4 pt-8 md:p-8 pb-24 bg-right-bottom bg-no-repeat sm:text-lg md:text-xl bg-[url(/assets/images/buildings.webp)] bg-[length:100px_auto] lg:bg-auto"
   >
@@ -10,14 +10,14 @@
       </h2>
       {% include 'partials/logo.liquid' %}
     </header>
-    <div
-      class="lg:grid lg:grid-cols-[auto,1fr,1fr] gap-4 sm:gap-6 md:gap-8 max-w-5xl clear-left"
-    >
-      <img
-        src="/assets/images/service-design.webp"
-        alt="Abstract illustration of a woman interacting with a digital screen with other indiviuals"
-        class="pr-8 pb-8 float-left lg:float-none absolute sm:static top-8 right-4 origin-top-right scale-[0.3] sm:scale-100"
-      />
+    <div class="lg:grid lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12 clear-left">
+      <div class="flex items-center justify-center">
+        <img
+          src="/assets/images/service-design.webp"
+          alt="Abstract illustration of a woman interacting with a digital screen with other indiviuals"
+          class="object-contain max-h-full max-w-full pr-8 pb-8 float-left lg:float-none absolute sm:static top-8 right-4 origin-top-right scale-[0.2] sm:scale-100"
+        />
+      </div>
       <p class="mb-2 sm:mb-3 md:mb-4">
         Service Design arbeitet auf Grundlage des
         Nutzer&shy;Innen&shy;erlebnisses - denn niemand kann besser Auskunft
