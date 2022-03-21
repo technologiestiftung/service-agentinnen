@@ -92,10 +92,13 @@ describe("Footer", () => {
       name: /Quellcode/i,
     }).should("exist");
     cy.findByRole("link", {
+      name: /Probleme der Barrierfreiheit melden/i,
+    }).should("exist");
+    cy.findByRole("link", {
       name: /Datenschutz/i,
     }).should("exist");
     cy.findByRole("link", {
-      name: /Impressumg/i,
+      name: /Impressum/i,
     }).should("exist");
   });
 });
