@@ -4,13 +4,18 @@
 >
   <ul>
     {% for link in hypotheses %}
-    <li class="py-2 grid grid-cols-[auto,1fr] gap-4 items-start">
+    <li
+      class="py-2 grid grid-cols-[auto,1fr] gap-4 items-start"
+      aria-label="Hypothese {{ forloop.index }}"
+    >
       <svg
         class="mt-1"
         xmlns="http://www.w3.org/2000/svg"
         width="12"
         height="18"
         viewBox="0 0 12 18"
+        role="img"
+        aria-label="Aufzählungspunkt Illustration"
       >
         <polygon
           fill="#F64C72"
@@ -18,7 +23,9 @@
           transform="translate(0 -7)"
         />
       </svg>
-      <a class="text-magenta-500 sm:text-lg xl:text-xl">{{ link.text }}</a>
+      <span class="text-magenta-500 sm:text-lg xl:text-xl">{{
+        link.text
+      }}</span>
     </li>
     {% endfor %}
   </ul>
