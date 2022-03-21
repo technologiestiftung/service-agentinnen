@@ -80,9 +80,11 @@ describe("Footer", () => {
   });
 
   it("renders the legal footer", () => {
+    cy.findByText(/Illustrationen © Lea Scheidt/i).should("exist");
     cy.findByRole("link", {
       name: /CC BY/i,
     }).should("exist");
+    cy.findByText(/© 2022 Technologiestiftung Berlin/i).should("exist");
     cy.findByRole("link", {
       name: /Kontakt/i,
     }).should("exist");
