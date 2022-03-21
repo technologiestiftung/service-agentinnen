@@ -34,7 +34,7 @@ layout: layouts/content.liquid
   aria-label="Liste aller Module"
 >
   {% for module in collections.module %}
-  <li class="even:translate-y-0 lg:even:translate-y-40">
+  <li class="mb-0 md:mb-24 even:translate-y-0 lg:even:translate-y-40">
     {% include 'partials/module_card.liquid' number: module.fileSlug href:
     module.url title: module.data.title abstract: module.data.abstract number:
     forloop.index image_url: module.data.hero_image_url image_alt:
