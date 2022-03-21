@@ -16,6 +16,12 @@
     best-practices = 0.5
     seo = 0.5
 
-  # optional, deploy the lighthouse report to a path under your site
-  [plugins.inputs]
-    output_path = "reports/lighthouse.html"
+  [[plugins.inputs.audits]]
+  output_path = "reports/lighthouse/home.html"
+  path = ""
+  [[plugins.inputs.audits]]
+  output_path = "reports/lighthouse/overview.html"
+  path = "module"
+  [[plugins.inputs.audits]]
+  output_path = "reports/lighthouse/firs-module.html"
+  path = "module/service-design-und-nutzerorientierung"
