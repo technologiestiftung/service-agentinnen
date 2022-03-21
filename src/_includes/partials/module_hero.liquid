@@ -27,7 +27,7 @@
     <img
       src="{{ hero_image_url }}"
       alt="{{ hero_image_alt }}"
-      class="translate-y-1/3 -mt-[50%]"
+      class="translate-y-12 {% if hypotheses %} sm:translate-y-1/3 {% else %} sm:translate-y-24 {% endif %} -mt-[50%]"
     />
   </div>
 </section>
