@@ -1,39 +1,22 @@
-name: Lighthouse CI for Netlify sites
+name: Lighthouse
 
-on: pull_request
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  build:
+  static-dist-dir:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Install & Build
+      - name: Build static site
         run: |
-          yarn install
-          yarn build
-      - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
-        id: netlify
-        with:
-          site_name: 'gallant-panini-bc8593'
-      - name: Audit URLs using Lighthouse
+          npm ci
+          npm run build
+      - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: |
-            ${{ steps.netlify.outputs.url }}
-            ${{ steps.netlify.outputs.url }}/module/
-            ${{ steps.netlify.outputs.url }}/module/service-design-und-nutzerorientierung/
-            ${{ steps.netlify.outputs.url }}/module/die-nutzer:innenperspektive/
-            ${{ steps.netlify.outputs.url }}/module/unterschiedliche-perspektiven-zusammenfuhren/
-            ${{ steps.netlify.outputs.url }}/module/nutzer:innenbefragung/
-            ${{ steps.netlify.outputs.url }}/module/erfahrungsschatz-nutzen-spielraume-erkunden/
-            ${{ steps.netlify.outputs.url }}/module/nutzerzentrierte-sprache/
-            ${{ steps.netlify.outputs.url }}/module/prototyping/
-            ${{ steps.netlify.outputs.url }}/module/innovationsprojekte-prasentieren/
-          budgetPath: ./budget.json
-          uploadArtifacts: true
+          # no urls needed, since it uses local folder to scan .html files
+          configPath: './lighthouserc.json'
