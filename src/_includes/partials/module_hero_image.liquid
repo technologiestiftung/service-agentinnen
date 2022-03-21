@@ -27,7 +27,6 @@
     />
   </picture>
   {% if has_outline %}
-    {%- comment -%} TODO: change this to dynamic partial {%- endcomment -%}
-    {% include 'partials/module_01_outline.liquid' class: 'absolute top-0 left-0 w-full h-auto' %}
+    {% include 'partials/module_hero_outline.liquid' class: 'absolute top-0 left-0 w-full h-auto' module_number: module_number %}
   {% endif %}
 </figure>
