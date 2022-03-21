@@ -15,7 +15,7 @@ describe("Meta Pages", () => {
     cy.request("/favicon.ico");
     cy.request("/icon.svg");
     cy.request("/icon.png");
-    cy.request("/icon-180.png");
+    cy.request("/apple-touch-icon.png");
     cy.request("/icon-192.png");
     cy.request("/icon-512.png");
   });
