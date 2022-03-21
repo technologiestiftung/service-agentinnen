@@ -1,12 +1,11 @@
-<section class="bg-blue-500 py-14 px-4 sm:px-8">
+<section class="bg-blue-500 py-14 md:py-24 px-4 sm:px-8">
   <div
-    class="container max-w-7xl flex flex-row-reverse md:grid gap-4 sm:gap-6 md:gap-10 md:grid-cols-3 items-start md:items-center"
+    class="container max-w-7xl flex flex-row-reverse md:grid gap-4 sm:gap-6 md:gap-10 md:grid-cols-3 items-start"
   >
-    <div class="flex justify-center w-20 sm:w-28 md:w-auto flex-shrink-0">
-      <img
-        src="/assets/images/modules/01_hero.png"
-        alt="Placeholder TODO: change image"
-      />
+    <div
+      class="flex justify-self-center w-20 sm:w-28 md:w-60 lg:w-64 flex-shrink-0"
+    >
+      {% include 'partials/module_hero_image.liquid' module_number: "01" has_outline: true %}
     </div>
     <div class="md:col-span-2">
       <h1
