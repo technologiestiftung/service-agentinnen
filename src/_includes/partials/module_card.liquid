@@ -1,3 +1,5 @@
+{% capture module_number %}{% if number < 10 %}0{% endif %}{{ number }}{% endcapture %}
+
 <a
   href="{{ href }}"
   aria-label="Link zu den Modul {{ fileSlug }}: {{ title }}"
@@ -24,7 +26,7 @@
         <span
           class="text-[40px] md:text-[44px] xl:text-[64px] md:leading-3 lg:leading-none font-bold text-magenta-500"
         >
-          {% if number < 10 %}0{% endif %}{{ number }}</span
+          {{ module_number }}</span
         ><br />
         {{ title }}
       </h2>
@@ -33,9 +35,5 @@
       </p>
     </div>
   </div>
-  <img
-    src="{{ image_url }}"
-    alt="{{ image_alt }}"
-    class="w-24 md:w-full md:order-first -translate-y-16 md:-translate-y-[28px] lg:-translate-y-[34px]"
-  />
+  {% include 'partials/module_hero_image.liquid' class: 'w-24 md:w-full md:order-first -translate-y-16 md:-translate-y-[28px] lg:-translate-y-[35px]' module_number: module_number has_outline: true image_alt: image_alt %}
 </a>
