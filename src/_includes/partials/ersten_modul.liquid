@@ -20,11 +20,13 @@
       </p>
     </div>
     <div class="md:relative">
-      <img
-        src="/assets/images/modules/01_hero.png"
-        alt="Abstrakte Illustration zum Modul 1: Service Design und Nutzerorientierung"
+      <div
         class="w-1/4 md:w-full h-auto absolute right-0 top-0 md:top-1/2 -translate-y-1/2"
-      />
+      >
+        {% include 'partials/module_illustration.liquid' module_number: "01"
+        has_outline: true image_alt: "Menschen, die sich an den Händen fassen
+        und Objekte austauschen" %}
+      </div>
     </div>
   </a>
   <a
