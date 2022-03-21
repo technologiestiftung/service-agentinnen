@@ -8,10 +8,7 @@ describe("Module Service Design", () => {
       name: /Alle Module/i,
     }).should("exist");
     cy.findByRole("heading", {
-      name: /Modul Nummer: .+/i,
-    }).should("exist");
-    cy.findByRole("heading", {
-      name: /Service Design und Nutzerorientierung/i,
+      name: /01 Service Design und Nutzerorientierung/i,
     }).should("exist");
     cy.findByRole("img", {
       name: /Menschen, die sich an den Händen fassen und Objekte austauschen/i,
