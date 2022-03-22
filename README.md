@@ -65,6 +65,15 @@ The individual module pages are generated using the markdown files found in `src
 
 The assets such as images, icons, stylesheets, aso. can be found in `src/assets/`. If you want to use a folder inside that doesn't exist yet, you need to add it to the Eleventy [asset pipeline](https://www.11ty.dev/docs/copy/).
 
+### Image optimizitaion
+
+We try to serve images that are optimized for different devices and screen sizes. If you want to add a new image to the site, consider this workflow:
+
+1. Create the image using you preferred software (e.g. Sketch)
+2. Export the image in both PNG and WEBP format in the following widths: 400px, 600px, 800px (you may skip some of the widths if they are not needed for your use case). Create exports with the following structure: `{name}-{width}.{format}`, e.g. `hero-800.webp`
+3. In the site, use the partial in `src/_includes/partials/picture.liquid` to render the image. See the comments in the partial for usage instructions.
+4. If the image will be rendered in such a way that the 800px-wide image does not suffize, consider adjusting the `picture.liquid` to the new requirements. For our _current_ state no image needs to be wider than 800px.
+
 ## Data
 
 General data can be defined in `src_/data/`.
