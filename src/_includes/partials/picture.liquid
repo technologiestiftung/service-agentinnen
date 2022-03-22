@@ -1,0 +1,49 @@
+{%- comment -%}
+This partial serves images that are optimized for different devices and screen sizes. Using this partial will mean that an image is loaded lazily.
+
+Required variables:
+directory = the asset directory, eg. 'assets/images'
+file_name = the base file name that all your exported images share
+image_alt = a textual representation of the image contents
+width     = the width of the biggest exported image
+height    = the height ogf the biggest exported image
+
+{%- endcomment -%}
+
+<picture class="{% if class %}{{ class }}{% endif %}">
+  <source
+    srcset="{{ directory }}/{{ file_name }}-800.webp 800w"
+    media="(min-width: 650px)"
+    type="image/webp"
+  />
+  <source
+    srcset="{{ directory }}/{{ file_name }}-800.png 800w"
+    media="(min-width: 650px)"
+    type="image/png"
+  />
+  <source
+    srcset="{{ directory }}/{{ file_name }}-600.webp 600w"
+    media="(min-width: 450px)"
+    type="image/webp"
+  />
+  <source
+    srcset="{{ directory }}/{{ file_name }}-600.png 600w"
+    media="(min-width: 450px)"
+    type="image/png"
+  />
+  <source
+    srcset="{{ directory }}/{{ file_name }}-400.webp 400w"
+    type="image/webp"
+  />
+  <source
+    srcset="{{ directory }}/{{ file_name }}-400.png 400w"
+    type="image/png"
+  />
+  <img
+    src="{{ directory }}/{{ file_name }}-800.png"
+    alt="{{ image_alt }}"
+    width="{{ width }}"
+    height="{{ height }}"
+    loading="lazy"
+  />
+</picture>
