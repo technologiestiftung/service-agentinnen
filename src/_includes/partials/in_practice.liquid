@@ -1,24 +1,21 @@
 <aside
-  class="container max-w-7xl py-8 px-8 bg-blue-50 bg-opacity-50 grid grid-cols-1 md:grid-cols-12 gap-8 mt-4 sm:mt-8 md:mt-16"
+  class="container max-w-7xl py-8 px-8 bg-blue-50 bg-opacity-50 grid grid-cols-3 md:grid-cols-12 gap-8 mt-4 sm:mt-8 md:mt-16"
 >
-  <div class="col-span-1 md:col-span-4 order-first md:order-none">
+  <div class="col-span-2 md:col-span-8 lg:col-span-4 order-first md:order-none">
     {% include 'partials/heading.liquid' content: 'In der Praxis: Die
     Pilot-Schulung 2021' class: 'pb-3 sm:pb-5 text-magenta-500 max-w-prose' %}
     <p class="max-w-prose">
-      Die Weiterbildung <i>Service:Agentinnen</i> ist ein vom CityLab durchgeführtes Pilotprojekt. 16
-      Mitarbeiter:innen der Berliner Senats- und Bezirksverwaltung haben an
-      realen Verwaltungsprozessen die Prinzipien und Werkzeuge der
-      nutzer:innenzentrierten Prozessgestaltung erlernt.
+      Die Weiterbildung <i>Service:Agentinnen</i> ist ein vom CityLab
+      durchgeführtes Pilotprojekt. 16 Mitarbeiter:innen der Berliner Senats- und
+      Bezirksverwaltung haben an realen Verwaltungsprozessen die Prinzipien und
+      Werkzeuge der nutzer:innenzentrierten Prozessgestaltung erlernt.
     </p>
   </div>
-  <img
-    src="/assets/images/schulung.webp"
-    alt="Viele Menschen stehen um einen Tisch herum"
-    class="col-span-1 md:col-span-8 lg:col-start-9 lg:col-span-4 w-full aspect-auto"
-    width="800"
-    height="384"
-  />
-  <div class="col-span-1 md:col-span-12">
+  {% include 'partials/picture.liquid' directory: 'assets/images/' file_name:
+  'schulung' image_alt: 'Ein Laptop, auf dem die Schulung über Zoom stattfindet'
+  width: '800' height: '384' class: 'col-span-1 md:col-start-9
+  md:col-span-4 w-full aspect-auto' %}
+  <div class="col-span-3 md:col-span-12">
     <h3 class="text-lg sm:text-xl md:text-2xl text-magenta-500">
       O-Töne unserer Teilnehmer:innen
     </h3>
