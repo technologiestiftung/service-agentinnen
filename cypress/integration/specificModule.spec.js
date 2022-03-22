@@ -1,6 +1,6 @@
 describe("Module Service Design", () => {
   beforeEach(() => {
-    cy.visit("/module/service-design-und-nutzerorientierung/");
+    cy.visit("/module/service-design-und-nutzer:innenorientierung/");
   });
 
   it("renders the hero correctly", () => {
@@ -8,7 +8,7 @@ describe("Module Service Design", () => {
       name: /Alle Module/i,
     }).should("exist");
     cy.findByRole("heading", {
-      name: /01 Service Design und Nutzerorientierung/i,
+      name: /Service Design und Nutzer:innen­orientierung/i,
     }).should("exist");
     cy.findByRole("img", {
       name: /Menschen, die sich an den Händen fassen und Objekte austauschen/i,
@@ -35,17 +35,21 @@ describe("Module Service Design", () => {
     cy.findByRole("img", {
       name: /Drei Hände und ein Smartphone/i,
     }).should("exist");
-    cy.findByText(/Sicher kennen viele Menschen das Bild einer Behörden.+/i).should("exist");
+    cy.findByText(
+      /Sicher kennen viele Menschen das Bild einer Behörde.+/i
+    ).should("exist");
   });
 
   it("renders the methods", () => {
-    cy.findAllByRole("heading", {
+    cy.findByRole("heading", {
       name: /Customer Journey/i,
-    }).should("have.length", 2);
-    cy.findAllByRole("link", {
+    }).should("exist");
+    cy.findByRole("link", {
       name: /Arbeitsblatt downloaden/i,
-    }).should("have.length", 2);
-    cy.findAllByText(/Im ersten Modul arbeiten wir mit der Methode .+/i).should("have.length", 3);
+    }).should("exist");
+    cy.findByText(/Im ersten Modul arbeiten wir mit der Methode .+/i).should(
+      "exist"
+    );
   });
 
   it("renders the further links", () => {
