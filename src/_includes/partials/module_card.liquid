@@ -5,6 +5,7 @@
 >
   <div
     class="md:bg-blue-25 md:px-4 md:py-4 md:h-[204px] lg:h-[254px] md:relative group-focus:ring group-focus:ring-magenta-500 group-focus:ring-offset-0"
+    aria-label="Zusammenfassung der Modulinhalte"
   >
     <div class="hidden md:block md:absolute top-0 right-0" aria-hidden="true">
       <svg
@@ -13,11 +14,15 @@
         height="32"
         viewBox="0 0 32 32"
         class="{% if is_on_blue %}text-blue-500{% else %}text-white{% endif %}"
+        aria-hidden="true"
       >
         <polygon points="0 0 32 0 32 32" fill="currentColor" stroke-width="0" />
       </svg>
     </div>
-    <div class="grid grid-rows-[auto_auto]">
+    <div
+      class="grid grid-rows-[auto_auto]"
+      aria-label="Textinhalte der Zusammenfassung"
+    >
       <h2
         class="text-xl md:text-lg xl:text-2xl md:leading-relaxed lg:leading-normal text-blue-500"
       >
@@ -28,7 +33,10 @@
         ><br />
         {{ title }}
       </h2>
-      <p class="mt-1 text-blue-300 text-base lg:text-sm xl:text-base">
+      <p
+        class="mt-1 text-blue-300 text-base lg:text-sm xl:text-base"
+        aria-label="Abstrakt des Moduls"
+      >
         {{ abstract }}
       </p>
     </div>

@@ -1,7 +1,11 @@
-<section class="bg-magenta-500 text-white my-8 sm:my-12 md:my-16 flex flex-col">
+<ul
+  class="bg-magenta-500 text-white my-8 sm:my-12 md:my-16 flex flex-col"
+  aria-label="List der Arbeitsblätter des Moduls"
+>
   {% for method in methods %}
-  <div
+  <li
     class="container max-w-7xl p-4 py-8 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr] gap-8 sm:gap-12 md:gap-16"
+    aria-label="Arbeitsblatt “{{ method.title }}”"
   >
     <div>
       {% include 'partials/heading.liquid' content: method.title class:
@@ -17,6 +21,6 @@
     <p class="sm:text-lg xl:text-xl">
       {{ method.description }}
     </p>
-  </div>
+  </li>
   {% endfor %}
-</section>
+</ul>
