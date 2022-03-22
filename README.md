@@ -71,8 +71,9 @@ We try to serve images that are optimized for different devices and screen sizes
 
 1. Create the image using you preferred software (e.g. Sketch)
 2. Export the image in both PNG and WEBP format in the following widths: 400px, 600px, 800px (you may skip some of the widths if they are not needed for your use case). Create exports with the following structure: `{name}-{width}.{format}`, e.g. `hero-800.webp`
-3. In the site, use the partial in `src/_includes/partials/picture.liquid` to render the image. See the comments in the partial for usage instructions.
-4. If the image will be rendered in such a way that the 800px-wide image does not suffize, consider adjusting the `picture.liquid` to the new requirements. For our _current_ state no image needs to be wider than 800px.
+3. Your software might have not exported the images in the most compressed way. Double-check if further reduction of file size is possible.
+4. In the site, use the partial in `src/_includes/partials/picture.liquid` to render the image. See the comments in the partial for usage instructions.
+5. If the image will be rendered in such a way that the 800px-wide image does not suffize, consider adjusting the `picture.liquid` to the new requirements. For our _current_ state no image needs to be wider than 800px.
 
 ## Data
 
