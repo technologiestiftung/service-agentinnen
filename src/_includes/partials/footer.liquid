@@ -1,15 +1,24 @@
-<footer class="relative border-t border-blue-50">
-  <section class="container max-w-7xl px-4 py-8">
-    <nav class="flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-16 sm:justify-between">
+<footer
+  class="relative border-t border-blue-50"
+  aria-label="Fußzeile der Webseite mit Credits, Logos, usw."
+>
+  <section
+    class="container max-w-7xl px-4 py-8"
+    aria-label="Logos Abschnitt der Fußzeile"
+  >
+    <nav
+      class="flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-16 sm:justify-between"
+      aria-label="Logos der Autor:innen und Partner:innen"
+    >
       <a
         href="https://citylab-berlin.org"
         class="opacity-100 transition-opacity hover:opacity-80"
-        aria-label="Logo vom Projekt CityLab Berlin"
+        aria-label="Logo vom Projekt CityLAB Berlin"
       >
         {% include 'partials/citylab_logo_color.liquid' %}
       </a>
-      <ul class="flex gap-6 sm:gap-16">
-        <li class="flex flex-col gap-4">
+      <ul class="flex gap-6 sm:gap-16" aria-label="Partner Logos">
+        <li class="flex flex-col gap-4" aria-label="Projektautor">
           Ein Projekt der:
           <a
             href="https://www.technologiestiftung-berlin.de/"
@@ -20,7 +29,7 @@
             >{% include 'partials/tsb_logo_color.liquid' %}</a
           >
         </li>
-        <li class="flex flex-col gap-4">
+        <li class="flex flex-col gap-4" aria-label="Projektträger">
           Gefördert durch:
           <a
             href="https://www.berlin.de/rbmskzl/"
@@ -34,21 +43,71 @@
       </ul>
     </nav>
   </section>
-  <section>
-  <div class="bg-blue-25 py-3">
-    <div class="container px-4 py-3">
-      <p>Texte und Inhalte verfügbar als <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank" rel="noopener noreferrer" class="underline">CC BY</a>, Illustrationen © Lea Scheidt</p>
-    </div>
-    <section class="container mt-0 px-4 flex justify-between flex-wrap">
-      <span>© 2022 Technologiestiftung Berlin</span>
-      <ul class="block sm:flex gap-2 sm:gap-4 flex-wrap">
-        <li><a targe="_blank" rel="noopener noreferrer" href="mailto:info@citylab-berlin.org">Kontakt</a></li>
-        <li><a targe="_blank" rel="noopener noreferrer" href="https://github.com/technologiestiftung/service-agentinnen">Quellcode</a></li>
-        <li><a targe="_blank" rel="noopener noreferrer" href="mailto:info@citylab-berlin.org">Probleme der Barrierfreiheit melden</a></li>
-        <li><a targe="_blank" rel="noopener noreferrer" href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutz</a></li>
-        <li><a targe="_blank" rel="noopener noreferrer" href="https://www.technologiestiftung-berlin.de/impressum">Impressum</a></li>
+  <section
+    class="bg-blue-25 py-3"
+    aria-label="Rechtlicher Abschnitt der Website"
+  >
+    <p class="container px-4 py-3" aria-label="Rechte über die Inhalte">
+      Texte und Inhalte verfügbar als
+      <a
+        href="https://creativecommons.org/licenses/by/3.0/de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline"
+        >CC BY</a
+      >, Illustrationen © Lea Scheidt
+    </p>
+    <nav
+      class="container mt-0 px-4 flex justify-between flex-wrap"
+      aria-label="Credits und rechtliche Links"
+    >
+      <span aria-label="Credits">© 2022 Technologiestiftung Berlin</span>
+      <ul
+        class="block sm:flex gap-2 sm:gap-4 flex-wrap"
+        aria-label="Liste der rechtlichen Links"
+      >
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:info@citylab-berlin.org"
+            >Kontakt</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/technologiestiftung/service-agentinnen"
+            >Quellcode</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:info@citylab-berlin.org"
+            >Probleme der Barrierfreiheit melden</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.technologiestiftung-berlin.de/datenschutz"
+            >Datenschutz</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.technologiestiftung-berlin.de/impressum"
+            >Impressum</a
+          >
+        </li>
       </ul>
-    </section>
-  </div>
+    </nav>
+  </section>
 </footer>
 <script src="/assets/js/common.js"></script>
