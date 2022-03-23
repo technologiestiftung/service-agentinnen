@@ -1,13 +1,20 @@
-<section class="bg-blue-500 py-14 md:py-24 px-4 sm:px-8">
+<section
+  class="bg-blue-500 py-14 md:py-24 px-4 sm:px-8"
+  aria-label="Einführung in die Website"
+>
   <div
     class="container max-w-7xl flex flex-row-reverse md:grid gap-4 sm:gap-6 md:gap-10 md:grid-cols-3 items-start"
   >
     <div
       class="flex justify-self-center w-20 sm:w-28 md:w-60 lg:w-64 flex-shrink-0"
+      aria-label="Bildbereich des Einführungsabschnitts"
     >
-      {% include 'partials/module_illustration.liquid' module_number: "01" has_outline: true image_alt: "Menschen, die sich an den Händen fassen und Objekte austauschen" %}
+      {% include 'partials/module_illustration.liquid' module_number: "01" has_outline: true image_alt: "Abstrakte Illustration einer Frau, die mit einer Bildschirmschnittstelle vor einer Menschenmenge interagiert" width: "410" height: "640" %}
     </div>
-    <div class="md:col-span-2">
+    <div
+      class="md:col-span-2"
+      aria-label="Textbereich des Einführungsabschnitts"
+    >
       <h1
         class="text-white text-3xl leading-none md:text-4xl lg:text-[40px] font-bold max-w-xl"
         aria-label="In 8 Modulen zur agilen Behördenarbeit"
@@ -21,18 +28,24 @@
       <p class="mt-4 text-white text-base md:text-lg xl:text-xl max-w-xl">
         Digitale, agile und nutzer:innen-orientierte Prozesse sind wesentlich
         für den anstehenden Wandel in allen Bereichen des öffentlichen Lebens.
-        Mit der Weiterbildung xxx geben wir auf diese Herausforderung eine
-        konkrete und umsetzbare Antwort. Lassen Sie sich inspirieren.
+        Mit der Weiterbildung <i>ServiceAgent:innen</i> geben wir auf diese
+        Herausforderung eine konkrete und umsetzbare Antwort. Lassen Sie sich
+        inspirieren.
       </p>
-      <div class="mt-8 w-max grid grid-cols-1 gap-3">
+      <div
+        class="mt-8 w-max grid grid-cols-1 gap-3"
+        aria-label="“Call to action” Buttons"
+      >
         <a
           href="/module"
           class="px-3 pt-1 pb-1 md:pb-2 bg-magenta-500 text-white text-base md:text-lg xl:text-xl text-center transition-colors hover:bg-magenta-400 focus:ring-white"
+          aria-label="Link zu alle Module"
           >Direkt zu den Modulen</a
         >
         <a
           href="#intro"
           class="px-3 pt-1 pb-1 md:pb-2 bg-white text-base md:text-lg xl:text-xl text-center transition-colors hover:text-magenta-500"
+          aria-label="Link zum nächsten Abschnitt: Die Einführung"
           >Mehr Informationen</a
         >
       </div>

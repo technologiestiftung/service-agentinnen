@@ -1,10 +1,21 @@
 # ServiceAgent:innen
 
-## Developing
+![A screenshot of the ServiceAgent:innen website](./README.png)
 
-This site is built with [Eleventy (11ty)](https://www.11ty.dev/docs/).
+This repository contains the code of the ServiceAgent:innen (service agent) static website. It is a guide for contemporary and agile administration work. It presents 8 modules that illustrate how governmental administration can benefit from digital and user-centric processes, in order to modernize themselves and work more effectively.
 
-### Getting started
+## Tech Stack
+
+### Content & Structure (HTML)
+This static site is built with [Eleventy (11ty)](https://www.11ty.dev/docs/). It uses the templating language [liquid](https://liquidjs.com/index.html) to combine together data and templates.
+
+### Styling (CSS)
+The pages are styles using [Tailwind CSS](https://tailwindcss.com). 
+
+### Interativity (JavaScript)
+The Javascript included in this page is vanilla and is minified using [uglifyjs](https://www.npmjs.com/package/uglify-js).
+
+## Getting started
 
 Install dependencies:
 
@@ -20,23 +31,45 @@ npm run dev
 
 A development server will be available at [http://localhost:8080](http://localhost:8080).
 
-### Modules
+## Layouts
 
-The modules presented in _ServiceAgent:innen_ can be found and modified in `src/modules/0{1-8}.md`. The overview page is `src/modules/index.liquid`.
+Layouts are templates that wrap other templates and surrounds them with markup. We use 3 types of layouts:
 
-### Home page
+- **Base:** This layout contains the HTML present in every page. It includes, for instance, the HTML head and the meta tags, scripts and stylesheets.
+- **Content:** This layout is applied to all the pages, except error pages such as the 404 page.
+- **Module:** The layout applies to individual module pages and contains reccurrent elements such as the hero section or the module's methods.
 
-The homepage is `src/index.liquid`.
+## Home page
 
-### Assets
+The homepage is `src/index.liquid`. It is a simple combination of other templates. Data for this page is defines in the `src/_data/` folder. 
 
-Can be found in `src/assets/`. If you want to use a folder inside that doesn't exist yet, you need to add it to the Eleventy [asset pipeline](https://www.11ty.dev/docs/copy/).
+## Modules
 
-### Data
+### Overview
+
+The modules overview can be found in `src/modules/index.liquid`. It leverages the concept of collections in the liquid templating language. The file `src/modules/modules.json` defines how module pages are generated. For instance, it makes available all markdown files tagged `module` available under the collection named `module`. This can then be user in `src/modules/index.liquid` as such:
+
+```html
+{% for module in collections.module %}
+  <li>
+    {{ module.title }}
+  </li>
+{% endfor %}
+```
+
+### Individual module
+
+The individual module pages are generated using the markdown files found in `src/modules/0{1-8}.md`. The  markdown's frontmatter and contents are used together with the layout `src/_includes/layouts/module.liquid` to create individual HTML pages.
+
+## Assets
+
+The assets such as images, icons, stylesheets, aso. can be found in `src/assets/`. If you want to use a folder inside that doesn't exist yet, you need to add it to the Eleventy [asset pipeline](https://www.11ty.dev/docs/copy/).
+
+## Data
 
 General data can be defined in `src_/data/`.
 
-### Includes (Layouts and Partials)
+## Includes (Layouts and Partials)
 
 `src/_includes` holds all [layouts](https://www.11ty.dev/docs/layouts/) and [partials](https://www.11ty.dev/docs/config/#directory-for-includes).
 
@@ -46,7 +79,7 @@ For testing we use [Cypress](https://docs.cypress.io/guides/overview/why-cypress
 
 Tests should cover the basic interactions of the website and ensure that all important content is present. Cypress tests should be added to `cypress/integration/` (currently there is only a test stub there).
 
-### Running tests locally
+## Running tests locally
 
 Make a test run:
 
@@ -60,6 +93,40 @@ Launching the test runner in watch mode:
 npm run test:watch
 ```
 
-### Running tests in CI
+## Running tests in CI
 
 In `.github/workflows/test.yml` we have configured Cypress to run all pushes and pull requests to `main`. The passing of this test run is required for merging changes.
+
+## Content Licencing
+
+Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/). 
+
+Illustrations by Lea Scheidt, all rights reserved.
+
+## Credits
+
+<table>
+  <tr>
+    <td>
+      Made by <a src="https://citylab-berlin.org/de/start/">
+        <br />
+        <br />
+        <img width="200" src="https://citylab-berlin.org/wp-content/uploads/2021/05/citylab-logo.svg" />
+      </a>
+    </td>
+    <td>
+      A project by <a src="https://www.technologiestiftung-berlin.de/">
+        <br />
+        <br />
+        <img width="150" src="https://citylab-berlin.org/wp-content/uploads/2021/05/tsb.svg" />
+      </a>
+    </td>
+    <td>
+      Supported by <a src="https://www.berlin.de/rbmskzl/">
+        <br />
+        <br />
+        <img width="80" src="https://citylab-berlin.org/wp-content/uploads/2021/12/B_RBmin_Skzl_Logo_DE_V_PT_RGB-300x200.png" />
+      </a>
+    </td>
+  </tr>
+</table>

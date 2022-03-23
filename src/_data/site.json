@@ -1,10 +1,10 @@
 {
   "name": "ServiceAgent:innen",
-  "url": "https://serviceagentinnen.citylab-berlin.org",
+  "url": "https://service-agentinnen.citylab-berlin.org",
   "authorName": "CityLAB Berlin",
   "description": "ServiceAgent:innen ist eine Schulung zur agileren Arbeit in Behörden. Sie besteht aus acht Modulen.",
-  "socialMediaImagePath": "/assets/images/social-media.png",
-  "socialMediaImageType": "image/png",
-  "socialMediaImageAlt": "Collage von Illustrationen und das Logo von ServiceAgent:innen",
+  "socialMediaImagePath": "/assets/images/home-social-image.webp",
+  "socialMediaImageType": "image/webp",
+  "socialMediaImageAlt": "Logo von ServiceAgent:innen + Title: “In 8 Modulen zur agilen Behörden­arbeit” + Slogan: “In 8 Modulen zur agilen Behörden­arbeit” + Logo vom CityLAB Berlin",
   "twitterUser": "@citylabberlin"
 }
