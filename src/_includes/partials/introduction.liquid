@@ -1,5 +1,6 @@
-<div
+<section
   class="my-16 md:mt-32 md:mb-24 px-4 container max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8"
+  aria-label="Einführungsabschnitt der Hauptseite"
 >
   <div class="md:col-span-4">
     {% include 'partials/heading.liquid' content: 'Einführung' class: 'pb-3
@@ -15,15 +16,15 @@
       Die Weiterbildung ist eine Möglichkeit, dieses Wissen zu erwerben und wird
       hier in einem konzentrierten Überblick vorgestellt.
     </p>
-    <p class="mt-4"></p>
-    Ziel ist es,
-    <ul class="list-disc pl-6 prose">
-    <li>den Ansatz Service Design näher zu bringen und seine Werkzeuge zu erläutern,</li>
-    <li>und konkretes Wissen und Arbeitsmaterialien zur Verfügung zu stellen.</li>
-  </ul>
+    <p class="mt-4">
+      Ziel ist es,
+      <ul class="list-disc pl-6 prose" aria-label="Liste der Ziele">
+        <li>den Ansatz Service Design näher zu bringen und seine Werkzeuge zu erläutern,</li>
+        <li>und konkretes Wissen und Arbeitsmaterialien zur Verfügung zu stellen.</li>
+      </ul>
     </p>
   </div>
-  <div class="order-first md:order-last md:col-span-8">
+  <div class="order-first md:order-last md:col-span-8" aria-label="Videoabschnitt">
     <div
       id="video-placeholder"
       class="aspect-video relative grid bg-blue-25 group text-magenta-500 hover:text-blue-500"
@@ -36,6 +37,7 @@
         class="object-cover w-full h-full"
         width="750"
         height="422"
+        aria-label="Vorschau-Bild des Videos"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +45,7 @@
         height="92"
         viewBox="0 0 92 92"
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        aria-label="Play-Button Symbol"
       >
         <circle
           cx="46"
@@ -54,10 +57,10 @@
         <polygon fill="#FFF" points="36 25 36 67.007 64.019 46.004" />
       </svg>
     </div>
-    <div class="bg-blue-50 bg-opacity-50 py-3 px-4">
+    <div class="bg-blue-50 bg-opacity-50 py-3 px-4" aria-label="Video-Zusammenfassung">
       <p class="max-w-prose">
         Rückblick auf die erste ServiceAgent:innen-Schulung 2021. (06:01 min)
       </p>
     </div>
   </div>
-</div>
+</section>

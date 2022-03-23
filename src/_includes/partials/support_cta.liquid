@@ -1,5 +1,6 @@
 <section
   class="bg-magenta-500 text-white mt-8 sm:mt-12 md:mt-16 flex flex-col relative"
+  aria-label="Nachfrage zum Unterstützungsbedarf"
 >
   <div
     class="container max-w-7xl p-4 py-8 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr] gap-8 sm:gap-12 md:gap-16"
@@ -49,15 +50,15 @@
       </p>
       <a
         href="mailto:info@citylab-berlin.org"
-        class="px-3 pt-1 pb-1 md:pb-2 bg-white text-blue-500 text-base md:text-lg lg:text-xl text-center transition-colors hover:text-magenta-500"
+        class="px-3 pt-1 pb-1 md:pb-2 bg-white text-blue-500 text-base md:text-lg lg:text-xl text-center transition-colors hover:text-magenta-500 focus:ring-blue-500"
         aria-label="Kontakltieren Sie uns per E-Mail an info@citylab-berlin.org"
       >
         info@citylab-berlin.org
       </a>
       <button
         id="back-to-top-link"
-        class="absolute -top-4 right-4 -translate-y-full transition hover:bg-blue-500 bg-magenta-500 text-white w-12 h-12 flex items-center justify-center"
-        aria-label="Zurück zum Seitenanfang hochscrollen"
+        class="absolute -top-4 right-4 -translate-y-full transition hover:bg-blue-500 bg-magenta-500 text-white w-12 h-12 flex items-center justify-center focus:ring-blue-500"
+        aria-label="Zurück zum Seitenanfang “hochscrollen”"
       >
         {% include 'partials/arrow_icon.liquid' class: '-rotate-180' %}
       </button>
