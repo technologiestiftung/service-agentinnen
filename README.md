@@ -47,10 +47,23 @@ The homepage is `src/index.liquid`. It is a simple combination of other template
 
 ### Overview
 
-The modules overview can be found in `src/modules/index.liquid`. It leverages the concept of collections in the liquid templating language. The file `src/modules/modules.json` defines how module pages are generated. For instance, it makes available all markdown files tagged `module` available under the collection named `module`. This can then be user in `src/modules/index.liquid` as such:
+The modules overview can be found in `src/modules/index.liquid`. It leverages the concept of collections in the liquid templating language. The file `src/modules/modules.json` defines how module pages are generated. For instance, it makes available all markdown files tagged `module` available under the collection named `module`. This collection is picked up by a custom collection (defined in `.eleventy.js`) that sorts the modules according to the file slug (01 - 08):
+
+```js
+eleventyConfig.addCollection("sortedModules", function (collectionApi) {
+    const sortedModules = collectionApi
+      .getFilteredByTag("module")
+      .sort((a, b) => {
+        return a.fileSlug - b.fileSlug;
+      });
+    return sortedModules;
+  });
+```
+
+The custom collection can then be used in `src/modules/index.liquid` as such:
 
 ```html
-{% for module in collections.module %}
+{% for module in collections.sortedModules %}
   <li>
     {{ module.title }}
   </li>
