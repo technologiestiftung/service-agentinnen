@@ -5,14 +5,14 @@
 {% capture class %}
 container max-w-7xl my-8 sm:my-12 md:my-16 p-4 py-8 sm:p-8 md:p-12 grid grid-cols-1
 {% if example_image_alt %}
-md:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr]
+sm:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr]
 {% endif %}
 gap-8 sm:gap-12 md:gap-16 items-center
 {% endcapture %}
 
 {% capture example %}
 {% if example_image_alt %}
-{% include 'partials/picture.liquid' directory: image_directory file_name: 'example' image_alt: example_image_alt width: '800' height: '800' class: 'w-full' %}
+{% include 'partials/picture.liquid' directory: image_directory file_name: 'example' image_alt: example_image_alt width: '800' height: '800' class: 'w-1/2 sm:w-full' %}
 {% endif %}
 <div class="prose leading-snug sm:text-lg xl:text-xl">
   {% include 'partials/heading.liquid' content: 'Beispiel' class: 'mb-3 sm:mb-4
