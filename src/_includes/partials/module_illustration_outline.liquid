@@ -16,4 +16,49 @@
     transform="translate(2 3)"
   />
   {% endif %}
+  {% if module_number == "02" %}
+  <polygon
+    fill="none"
+    stroke="#FFF"
+    stroke-width="1"
+    vector-effect="non-scaling-stroke"
+    points="0 368.099 0 1373.362 238.768 1514.481 470.705 1386.426 891 1151.027 891 139.624 660.069 0"
+    transform="translate(2 3)"
+  />
+  {% endif %}
+  {%- comment -%}
+  Modules 04, 06, and 08 have the same
+  outline shape, so we only add the polygon once.
+  {%- endcomment -%}
+  {% if module_number == "04" or module_number == "06" or
+  module_number == "08" %}
+  <polygon
+    fill="none"
+    stroke="#FFF"
+    stroke-width="1"
+    vector-effect="non-scaling-stroke"
+    points="0 368.099 0 1373.362 238.768 1514.481 470.705 1386.426 891 1151.027 891 139.624 660.069 0"
+    transform="translate(2 3)"
+  />
+  {% endif %}
+  {% if module_number == "05" %}
+  <polygon
+    fill="none"
+    stroke="#FFF"
+    stroke-width="1"
+    vector-effect="non-scaling-stroke"
+    points="0 368.099 0 1373.362 238.768 1514.481 470.705 1386.426 891 1151.027 891 139.624 891 131.625 842.937 102.676 837.971 107.562 660.069 0"
+    transform="translate(2 3)"
+  />
+  {% endif %}
+  {% if module_number == "07" %}
+  <polygon
+    fill="none"
+    stroke="#FFF"
+    stroke-width="1"
+    vector-effect="non-scaling-stroke"
+    points="0 368.099 0 1384.768 167.808 1484.101 167.808 1472.542 238.768 1514.481 470.705 1386.426 628.91 1297.818 628.91 1310.605 806.687 1217.184 806.687 1202.362 891 1151.027 891 139.624 660.069 0"
+    transform="translate(2 3)"
+  />
+  {% endif %}
 </svg>
