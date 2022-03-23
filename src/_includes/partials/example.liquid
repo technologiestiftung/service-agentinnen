@@ -1,17 +1,23 @@
+{% capture image_directory %}
+/assets/images/modules/{{ module_number }}
+{% endcapture %}
+
+{% capture class %}
+container max-w-7xl my-8 sm:my-12 md:my-16 p-4 py-8 sm:p-8 md:p-12 grid grid-cols-1
+{% if example_image_alt %}
+sm:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr]
+{% endif %}
+gap-8 sm:gap-12 md:gap-16 items-center
+{% endcapture %}
+
 {% capture example %}
-<img
-  src="{{ example_image_url }}"
-  alt="{{ example_image_alt }}"
-  width="{{ example_image_width }}"
-  height="{{ example_image_height }}"
-  class="w-full"
-/>
+{% if example_image_alt %}
+{% include 'partials/picture.liquid' directory: image_directory file_name: 'example' sizes: '400 800' image_alt: example_image_alt width: '800' height: '800' class: 'w-1/2 sm:w-full' %}
+{% endif %}
 <div class="prose leading-snug sm:text-lg xl:text-xl">
   {% include 'partials/heading.liquid' content: 'Beispiel' class: 'mb-3 sm:mb-4
   md:mb-5 font-normal text-magenta-500' %}
   <p>{{ example }}</p>
 </div>
 {% endcapture %} {% include 'partials/angle_block.liquid' content: example
-class: 'container max-w-7xl my-8 sm:my-12 md:my-16 p-4 py-8 sm:p-8 md:p-12 grid
-grid-cols-1 md:grid-cols-[1fr,2fr] lg:grid-cols-[2fr,3fr,1fr] gap-8 sm:gap-12
-md:gap-16 items-center' ariaLabel: 'Beispiel Abschnitt des Moduls' %}
+class: class ariaLabel: 'Beispiel Abschnitt des Moduls' %}
