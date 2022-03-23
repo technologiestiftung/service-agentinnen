@@ -22,21 +22,21 @@
       </svg>
     </div>
     <div
-      class="grid grid-rows-[auto_auto]"
+      class="flex flex-col gap-3"
       aria-label="Textinhalte der Zusammenfassung"
     >
       <h2
-        class="text-xl md:text-lg xl:text-2xl md:leading-relaxed lg:leading-normal text-blue-500"
+        class="text-xl md:text-lg xl:text-2xl text-blue-500 flex flex-col gap-6"
       >
         <span
-          class="text-[40px] md:text-[44px] xl:text-[60px] leading-[0.5] md:leading-[0.7] lg:leading-[0.6] xl:leading-[0.5] font-bold text-magenta-500"
+          class="text-[40px] md:text-[44px] xl:text-[56px] leading-[0.5] md:leading-[0.7] lg:leading-[0.6] xl:leading-[0.4] font-bold text-magenta-500"
         >
           {{ module_number }}</span
         ><br />
-        {{ title }}
+        <span class="block leading-7">{{ title }}</span>
       </h2>
       <p
-        class="mt-1 text-blue-300 text-base lg:text-sm xl:text-base"
+        class="mt-1 text-blue-300 text-base lg:text-sm xl:text-base lg:leading-tight xl:leading-tight"
         aria-label="Kurzbeschreibung des Moduls"
       >
         {{ abstract }}
