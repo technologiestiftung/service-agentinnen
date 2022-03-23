@@ -12,7 +12,7 @@ gap-8 sm:gap-12 md:gap-16 items-center
 
 {% capture example %}
 {% if example_image_alt %}
-{% include 'partials/picture.liquid' directory: image_directory file_name: 'example' image_alt: example_image_alt width: '800' height: '800' class: 'w-1/2 sm:w-full' %}
+{% include 'partials/picture.liquid' directory: image_directory file_name: 'example' sizes: '400 800' image_alt: example_image_alt width: '800' height: '800' class: 'w-1/2 sm:w-full' %}
 {% endif %}
 <div class="prose leading-snug sm:text-lg xl:text-xl">
   {% include 'partials/heading.liquid' content: 'Beispiel' class: 'mb-3 sm:mb-4

@@ -7,10 +7,12 @@ file_name = the base file name that all your exported images share
 image_alt = a textual representation of the image contents
 width     = the width of the biggest exported image
 height    = the height ogf the biggest exported image
+sizes     = a string defining the image variants we have provided, e.g. ('400 800')
 
 {%- endcomment -%}
 
 <picture class="{% if class %}{{ class }}{% endif %}">
+  {% if sizes contains '800' %}
   <source
     srcset="{{ directory }}/{{ file_name }}-800.webp 800w"
     media="(min-width: 650px)"
@@ -21,6 +23,8 @@ height    = the height ogf the biggest exported image
     media="(min-width: 650px)"
     type="image/png"
   />
+  {% endif %}
+  {% if sizes contains '600' %}
   <source
     srcset="{{ directory }}/{{ file_name }}-600.webp 600w"
     media="(min-width: 450px)"
@@ -31,6 +35,8 @@ height    = the height ogf the biggest exported image
     media="(min-width: 450px)"
     type="image/png"
   />
+  {% endif %}
+  {% if sizes contains '400' %}
   <source
     srcset="{{ directory }}/{{ file_name }}-400.webp 400w"
     type="image/webp"
@@ -39,6 +45,7 @@ height    = the height ogf the biggest exported image
     srcset="{{ directory }}/{{ file_name }}-400.png 400w"
     type="image/png"
   />
+  {% endif %}
   <img
     src="{{ directory }}/{{ file_name }}-800.png"
     alt="{{ image_alt }}"
