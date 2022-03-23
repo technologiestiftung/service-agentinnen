@@ -61,6 +61,39 @@ The modules overview can be found in `src/modules/index.liquid`. It leverages th
 
 The individual module pages are generated using the markdown files found in `src/modules/0{1-8}.md`. The  markdown's frontmatter and contents are used together with the layout `src/_includes/layouts/module.liquid` to create individual HTML pages.
 
+<details>
+<summary>The front matter is used as in this example</summary>
+
+```yml
+---
+title: Service Design und Nutzerorientierung # required
+socialMediaImagePath: /assets/images/modules/01-social-image.webp # required
+socialMediaImageType: image/webp # required
+socialMediaImageAlt: Modul 1 “Service Design und Nutzerorientierung” # required
+abstract: Short summary of the module
+example: Text for the example block of the page # required
+example_image_alt: Description of what is depicted in the example image # required if example image is desired
+methods: # array of methods, not required, often has only one entry
+  - 
+    title: Customer Journey
+    abstract: Short summary of the method
+    description: Detailed description'
+    doc_path: /path/to/accompanying/doc.pdf
+further_reading: # array of resources
+  - 
+    title: Bürokratieabbau durch Digitalisierung
+    description: Gutachten Öffentliche IT und Fraunhofer
+    link: https://www.normenkontrollrat.bund.de/resource/blob/300864/753834/ea4c588fa9edf79304d947baf766e624/2015-11-12-gutachten-egov-2015-dokumentation-data.pdf?download=1
+  - 
+    title: Zufriedenheit mit behördlichen Leistungen
+    description: Befragung des Statistischen Bundesamts 2019
+    link: https://www.amtlich-einfach.de/SharedDocs/Downloads/Ergebnisse_Buerger_2019.pdf?__blob=publicationFile&v=2
+hypotheses: # array of short hypotheses, not required
+  - 
+    text: Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen reduzieren, Geld sparen und Ressourcen freisetzen
+```
+</details>
+
 ## Assets
 
 The assets such as images, icons, stylesheets, aso. can be found in `src/assets/`. If you want to use a folder inside that doesn't exist yet, you need to add it to the Eleventy [asset pipeline](https://www.11ty.dev/docs/copy/).
