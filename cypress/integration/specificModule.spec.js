@@ -32,9 +32,6 @@ describe("Module Service Design", () => {
     cy.findByRole("heading", {
       name: /Beispiel/i,
     }).should("exist");
-    cy.findByRole("img", {
-      name: /Drei Hände und ein Smartphone/i,
-    }).should("exist");
     cy.findByText(
       /Sicher kennen viele Menschen das Bild einer Behörde.+/i
     ).should("exist");

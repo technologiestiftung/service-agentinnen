@@ -1,0 +1,34 @@
+<figure
+  class="relative {% if class %}{{ class }}{% endif %}"
+>
+  <picture>
+    <source
+      srcset="/assets/images/modules/{{ module_number }}/hero-800.webp 800w"
+      media="(min-width: 1024px)"
+      type="image/webp"
+    />
+    <source
+      srcset="/assets/images/modules/{{ module_number }}/hero-800.png 800w"
+      media="(min-width: 1024px)"
+      type="image/png"
+    />
+    <source
+      srcset="/assets/images/modules/{{ module_number }}/hero-400.webp 400w"
+      type="image/webp"
+    />
+    <source
+      srcset="/assets/images/modules/{{ module_number }}/hero-400.png 400w"
+      type="image/png"
+    />
+    <img
+      src="/assets/images/modules/{{ module_number }}/hero-800.png"
+      alt="{{ image_alt }}"
+      width="{{ width }}"
+      height="{{ height }}"
+      loading="lazy"
+    />
+  </picture>
+  {% if has_outline %}
+    {% include 'partials/module_illustration_outline.liquid' class: 'absolute top-0 left-0 w-full h-auto' module_number: module_number %}
+  {% endif %}
+</figure>

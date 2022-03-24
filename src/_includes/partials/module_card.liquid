@@ -1,3 +1,6 @@
+{% capture module_number %}{% if number < 10 %}0{% endif %}{{ number }}{%
+endcapture %}
+
 <a
   href="{{ href }}"
   aria-label="Link zu den Modul {{ fileSlug }}: {{ title }}"
@@ -29,7 +32,7 @@
         <span
           class="text-[40px] md:text-[44px] xl:text-[56px] leading-[0.5] md:leading-[0.7] lg:leading-[0.6] xl:leading-[0.4] font-bold text-magenta-500"
         >
-          {% if number < 10 %}0{% endif %}{{ number }}</span
+          {{ module_number }}</span
         >
         <span class="block leading-7">{{ title }}</span>
       </h2>
@@ -41,9 +44,7 @@
       </p>
     </div>
   </div>
-  <img
-    src="{{ image_url }}"
-    alt="{{ image_alt }}"
-    class="w-24 md:w-full md:order-first -translate-y-16 md:-translate-y-[28px] lg:-translate-y-[34px]"
-  />
+  {% include 'partials/module_illustration.liquid' class: 'w-24 md:w-full
+  md:order-first -translate-y-16 md:-translate-y-[28px] lg:-translate-y-[35px]'
+  module_number: module_number has_outline: is_on_blue image_alt: image_alt width: '800' height: '1362'  %}
 </a>
