@@ -6,10 +6,29 @@
     class="container max-w-7xl flex flex-row-reverse md:grid gap-4 sm:gap-6 md:gap-10 md:grid-cols-3 items-start"
   >
     <div
-      class="flex justify-self-center w-20 sm:w-28 md:w-60 lg:w-64 flex-shrink-0"
+      class="flex justify-self-center w-20 sm:w-28 md:w-60 lg:w-64 flex-shrink-0 relative"
       aria-label="Bildbereich des Einführungsabschnitts"
     >
-      {% include 'partials/module_illustration.liquid' module_number: "01" has_outline: true image_alt: "Abstrakte Illustration einer Frau, die mit einer Bildschirmschnittstelle vor einer Menschenmenge interagiert" width: "410" height: "640" %}
+      {% include 'partials/picture.liquid' directory: '/assets/images'
+      file_name: 'title' image_alt: "Abstrakte Illustration einer Frau, die mit
+      einer Bildschirmschnittstelle vor einer Menschenmenge interagiert" width:
+      "800" height: "1258" sizes: '400 800' class: 'absolute top-0 left-0 w-full
+      h-auto' %}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="802"
+        height="1261"
+        viewBox="0 0 802 1261"
+        class="absolute top-0 left-0 w-full h-auto"
+      >
+        <polygon
+          fill="none"
+          stroke="#FFF"
+          stroke-width="1"
+          vector-effect="non-scaling-stroke"
+          points="1 306.45 1 1142.789 197.828 1260.141 627.834 1020.06 633.555 1038.937 641.296 1055.112 649.64 1068.779 653.622 1068.779 781.217 996.775 782.23 992.851 772.944 923.023 781.217 918.765 788.73 908.494 791.239 898.096 791.239 886.691 789.402 870.643 780.406 824.475 778.113 811.088 785.837 806.416 794.376 797.33 798.804 787.325 800.538 777.992 800.538 763.656 798.804 750.734 793.523 728.66 786.42 697.881 782.23 681.274 780.406 668.96 779.775 663.417 779.775 653.169 779.775 642.252 781.217 629.346 781.217 617.046 779.775 607.518 777.298 599.721 771.995 592.052 765.979 585.152 758.705 580.621 749.221 576.415 741.256 573.525 741.256 117.725 548.636 1"
+        />
+      </svg>
     </div>
     <div
       class="md:col-span-2"
