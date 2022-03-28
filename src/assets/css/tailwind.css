@@ -52,4 +52,12 @@
   summary:focus {
     @apply relative z-20 outline-none ring ring-magenta-500 ring-offset-0;
   }
+
+  .main-logo path {
+    transition: fill 0.2s ease-in-out;
+  }
+
+  .main-logo:hover path {
+    @apply !fill-magenta-500;
+  }
 }
