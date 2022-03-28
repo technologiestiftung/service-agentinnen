@@ -1,4 +1,7 @@
-<section class="container max-w-7xl px-4 py-16 md:py-24">
+<section
+  class="container max-w-7xl px-4 py-16 md:py-24"
+  aria-label="Highlight des ersten Moduls als Einstiegsmöglichkeit"
+>
   {% include 'partials/heading.liquid' content: 'Gleich loslegen mit dem ersten
   Modul' class: 'pr-[28%] md:pr-0 text-magenta-500' %}
   <a
@@ -15,22 +18,23 @@
     </h3>
     <div>
       <p class="text-blue-300 max-w-md leading-tight">
-        Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen reduzieren, Geld sparen und Ressourcen freisetzen.
+        Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen
+        reduzieren, Geld sparen und Ressourcen freisetzen.
       </p>
     </div>
     <div class="md:relative">
-      <img
-        src="/assets/images/modules/01_hero.webp"
-        alt="Abstrakte Illustration zum Modul 1: Service Design und Nutzer:innenorientierung"
+      <div
         class="w-1/4 md:w-full h-auto absolute right-0 top-0 md:top-1/2 -translate-y-1/2"
-        width="193"
-        height="325"
-      />
+      >
+        {% include 'partials/module_illustration.liquid' module_number: "01"
+        has_outline: true image_alt: "Abstrakte Illustration zum Modul 1: Service Design und Nutzer:innenorientierung" width: "193" height: "325" %}
+      </div>
     </div>
   </a>
   <a
     href="/module"
-    class="px-3 pt-1 pb-1 md:pb-2 bg-magenta-500 text-white text-base md:text-lg xl:text-xl text-center transition-colors hover:bg-magenta-400 focus:ring-white"
+    class="px-3 pt-1 pb-1 md:pb-2 bg-magenta-500 text-white text-base md:text-lg xl:text-xl text-center transition-colors hover:bg-magenta-400 focus:ring-blue-500"
+    aria-label="Zur Übersicht der Modul-Seiten navigieren"
     >Alle Module</a
   >
 </section>

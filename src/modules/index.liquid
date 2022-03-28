@@ -8,7 +8,10 @@ eleventyExcludeFromCollections: true
 layout: layouts/content.liquid
 ---
 
-<section class="bg-blue-500 pt-14 pb-48 px-4 md:px-8">
+<section
+  class="bg-blue-500 pt-14 pb-48 px-4 md:px-8"
+  aria-label="Einführungsabschnitt über alle Module"
+>
   <div class="container max-w-7xl">
     <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold">
       {{ title }}
@@ -24,9 +27,9 @@ layout: layouts/content.liquid
         title: "Beispiel" description: "Wie sieht dieses Modul in einem
         Praxiskontext aus?" %} {% include
         "partials/module_section_description.liquid" title: "Arbeitsblätter"
-        description: "Zum praktischen Arbeiten (wenn anwendbar)" %} {%
-        include "partials/module_section_description.liquid" title: "Weitere
-        Links" description: "Links zu vertiefenden Ressourcen" %}
+        description: "Zum praktischen Arbeiten (wenn anwendbar)" %} {% include
+        "partials/module_section_description.liquid" title: "Weitere Links"
+        description: "Links zu vertiefenden Ressourcen" %}
       </ul>
     </div>
   </div>
@@ -36,8 +39,11 @@ layout: layouts/content.liquid
   class="container max-w-7xl pb-24 px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-0 lg:gap-8 xl:gap-16 -translate-y-12 md:-translate-y-20"
   aria-label="Liste aller Module"
 >
-  {% for module in collections.module %}
-  <li class="even:translate-y-0 lg:even:translate-y-40">
+  {% for module in collections.sortedModules %}
+  <li
+    class="mb-0 md:mb-24 even:translate-y-0 lg:even:translate-y-40"
+    aria-label="Modul {{ forloop.index }}: “{{ module.data.title }}”"
+  >
     {% include 'partials/module_card.liquid' number: module.fileSlug href:
     module.url title: module.data.title abstract: module.data.abstract number:
     forloop.index image_url: module.data.hero_image_url image_alt:

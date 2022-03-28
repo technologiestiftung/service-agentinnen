@@ -21,6 +21,16 @@ module.exports = function (eleventyConfig) {
     return value.replace("&shy;", "");
   });
 
+  // Module collection (custom sort by fileSlug)
+  eleventyConfig.addCollection("sortedModules", function (collectionApi) {
+    const sortedModules = collectionApi
+      .getFilteredByTag("module")
+      .sort((a, b) => {
+        return a.fileSlug - b.fileSlug;
+      });
+    return sortedModules;
+  });
+
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content) {
     if (this.outputPath && this.outputPath.endsWith(".html")) {

@@ -5,6 +5,9 @@
       {{ class }}
     {% endif %}
 "
+  {% if ariaLabel %}
+    aria-label="{{ ariaLabel }}"
+  {% endif %}
 >
   <div class="absolute top-0 right-0" aria-hidden="true">
     <svg
