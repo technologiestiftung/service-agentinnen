@@ -49,15 +49,6 @@
     @apply focus:outline-none focus:ring focus:ring-magenta-500 focus:ring-offset-0;
   }
 
-  details > summary {
-    list-style: none;
-  }
-
-  details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
-  details > summary::-webkit-details-marker /* Safari */ {
-    display: none;
-  }
-
   summary:focus {
     @apply relative z-20 outline-none ring ring-magenta-500 ring-offset-0;
   }
