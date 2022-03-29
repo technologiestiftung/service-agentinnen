@@ -7,6 +7,9 @@ module.exports = function (eleventyConfig) {
   // Include all content in the images folder
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
+  // Include all content in the videos folder
+  eleventyConfig.addPassthroughCopy("src/assets/videos");
+
   // Include all content in the fonts folder
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
