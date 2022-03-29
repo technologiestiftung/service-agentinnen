@@ -2,36 +2,35 @@
   class="container max-w-7xl px-4 py-16 md:py-24"
   aria-label="Highlight des ersten Moduls als Einstiegsmöglichkeit"
 >
-  {% include 'partials/heading.liquid' content: 'Gleich loslegen mit dem ersten
-  Modul' class: 'pr-[28%] md:pr-0 text-magenta-500' %}
+  {% include 'partials/heading.liquid' content: title class: 'pr-[28%] md:pr-0
+  text-magenta-500' %}
   <a
-    href="/module/service-design-und-nutzer:innenorientierung/"
+    href="{{ module_link }}"
     class="group flex gap-2 flex-col md:grid md:grid-cols-[auto,1fr,2fr,193px] md:gap-8 bg-blue-50 bg-opacity-50 pl-8 pr-[28%] md:pr-0 pt-8 md:pt-5 pb-6 my-6 md:my-10 md:items-center relative transition-colors hover:bg-magenta-500 hover:text-white"
-    aria-label="Zum ersten Modul Service Design und Nutzer:innenorientierung navigieren"
+    aria-label="{{ module_link_aria }}"
   >
     <span
       class="text-5xl md:text-7xl -mt-4 text-magenta-500 group-hover:text-white leading-10 font-semibold mb-2 md:mb-0"
-      >01</span
     >
+      {{ module_number }}
+    </span>
     <h3 class="text-xl md:text-2xl leading-tight -mt-1">
-      Service Design und Nutzer:innen&shy;orientierung
+      {{ module_title }}
     </h3>
     <div>
       <p
         class="text-blue-300 group-hover:text-white max-w-md sm:text-lg md:text-xl leading-snug"
       >
-        Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen
-        reduzieren, Geld sparen und Ressourcen freisetzen.
+        {{ module_abstract }}
       </p>
     </div>
     <div class="md:relative h-full">
       <div
         class="w-1/4 md:w-full h-auto absolute right-0 top-0 md:top-1/2 -translate-y-1/2"
       >
-        {% include 'partials/module_illustration.liquid' module_number: "01"
-        has_outline: false image_alt: "Abstrakte Illustration zum Modul 1:
-        Service Design und Nutzer:innenorientierung" width: "193" height: "325"
-        %}
+        {% include 'partials/module_illustration.liquid' module_number:
+        module_number has_outline: false image_alt: module_illustration_alt
+        width: "193" height: "325" %}
       </div>
     </div>
   </a>

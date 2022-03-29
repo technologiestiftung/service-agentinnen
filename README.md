@@ -135,7 +135,7 @@ General data can be defined in `src_/data/`.
 
 For testing we use [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) and [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro/).
 
-Tests should cover the basic interactions of the website and ensure that all important content is present. Cypress tests should be added to `cypress/integration/` (currently there is only a test stub there).
+Tests should cover the basic interactions of the website and ensure that all important content is present. Cypress tests should be added to `cypress/integration/`.
 
 ## Running tests locally
 
