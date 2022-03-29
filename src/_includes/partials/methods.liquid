@@ -10,7 +10,9 @@
     <div>
       {% include 'partials/heading.liquid' content: method.title class:
       'text-white font-bold mb-1' %} {% if abstract %}
-      <p class="mb-5 sm:text-lg xl:text-xl">{{ method.abstract }}</p>
+      <p class="mb-5 prose text-white sm:text-lg xl:text-xl">
+        {{ method.abstract }}
+      </p>
       {% endif %} {% if method.doc_path %}
       <a
         href="{{ method.doc_path }}"
@@ -19,7 +21,7 @@
       >
       {% endif %}
     </div>
-    <p class="sm:text-lg xl:text-xl">
+    <p class="prose text-white sm:text-lg xl:text-xl">
       {{ method.description }}
     </p>
   </li>
