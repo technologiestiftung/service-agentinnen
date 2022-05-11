@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Build%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiesitftung%20Berlin-blue)
+![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
 # ServiceAgent:innen
 
@@ -9,12 +9,15 @@ This repository contains the code of the ServiceAgent:innen (service agent) stat
 ## Tech Stack
 
 ### Content & Structure (HTML)
+
 This static site is built with [Eleventy (11ty)](https://www.11ty.dev/docs/). It uses the templating language [liquid](https://liquidjs.com/index.html) to combine together data and templates.
 
 ### Styling (CSS)
-The pages are styles using [Tailwind CSS](https://tailwindcss.com). 
+
+The pages are styles using [Tailwind CSS](https://tailwindcss.com).
 
 ### Interativity (JavaScript)
+
 The Javascript included in this page is vanilla and is minified using [uglifyjs](https://www.npmjs.com/package/uglify-js).
 
 ## Getting started
@@ -43,7 +46,7 @@ Layouts are templates that wrap other templates and surrounds them with markup. 
 
 ## Home page
 
-The homepage is `src/index.liquid`. It is a simple combination of other templates. Data for this page is defines in the `src/_data/` folder. 
+The homepage is `src/index.liquid`. It is a simple combination of other templates. Data for this page is defines in the `src/_data/` folder.
 
 ## Modules
 
@@ -53,28 +56,26 @@ The modules overview can be found in `src/modules/index.liquid`. It leverages th
 
 ```js
 eleventyConfig.addCollection("sortedModules", function (collectionApi) {
-    const sortedModules = collectionApi
-      .getFilteredByTag("module")
-      .sort((a, b) => {
-        return a.fileSlug - b.fileSlug;
-      });
-    return sortedModules;
-  });
+  const sortedModules = collectionApi
+    .getFilteredByTag("module")
+    .sort((a, b) => {
+      return a.fileSlug - b.fileSlug;
+    });
+  return sortedModules;
+});
 ```
 
 The custom collection can then be used in `src/modules/index.liquid` as such:
 
 ```html
 {% for module in collections.sortedModules %}
-  <li>
-    {{ module.title }}
-  </li>
+<li>{{ module.title }}</li>
 {% endfor %}
 ```
 
 ### Individual module
 
-The individual module pages are generated using the markdown files found in `src/modules/0{1-8}.md`. The  markdown's frontmatter and contents are used together with the layout `src/_includes/layouts/module.liquid` to create individual HTML pages.
+The individual module pages are generated using the markdown files found in `src/modules/0{1-8}.md`. The markdown's frontmatter and contents are used together with the layout `src/_includes/layouts/module.liquid` to create individual HTML pages.
 
 <details>
 <summary>The front matter is used as in this example</summary>
@@ -89,24 +90,21 @@ abstract: Short summary of the module
 example: Text for the example block of the page # required
 example_image_alt: Description of what is depicted in the example image # required if example image is desired
 methods: # array of methods, not required, often has only one entry
-  - 
-    title: Customer Journey
+  - title: Customer Journey
     abstract: Short summary of the method
     description: Detailed description'
     doc_path: /path/to/accompanying/doc.pdf
 further_reading: # array of resources
-  - 
-    title: Bürokratieabbau durch Digitalisierung
+  - title: Bürokratieabbau durch Digitalisierung
     description: Gutachten Öffentliche IT und Fraunhofer
     link: https://www.normenkontrollrat.bund.de/resource/blob/300864/753834/ea4c588fa9edf79304d947baf766e624/2015-11-12-gutachten-egov-2015-dokumentation-data.pdf?download=1
-  - 
-    title: Zufriedenheit mit behördlichen Leistungen
+  - title: Zufriedenheit mit behördlichen Leistungen
     description: Befragung des Statistischen Bundesamts 2019
     link: https://www.amtlich-einfach.de/SharedDocs/Downloads/Ergebnisse_Buerger_2019.pdf?__blob=publicationFile&v=2
 hypotheses: # array of short hypotheses, not required
-  - 
-    text: Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen reduzieren, Geld sparen und Ressourcen freisetzen
+  - text: Service Design erzeugt gute Angebote, die Stress für Mitarbeiter:innen reduzieren, Geld sparen und Ressourcen freisetzen
 ```
+
 </details>
 
 ## Assets
@@ -179,7 +177,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Content Licencing
 
-Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/). 
+Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
 
 Illustrations by Lea Scheidt, all rights reserved.
 
